@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background: #1a1a1a url('imagenes/Biblio.png') repeat;
+    background-size: cover;
+    color: #f3e4c7;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    background-image: url('imagenes/BannerDnD.gif');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    border-bottom: 4px solid #8b0000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+/* NAV integrado en el header */
+nav {
+    background-color: rgba(44, 26, 18, 0.95);
+    padding: 12px 0;
+    border-top: 2px solid #8b0000;
+    border-bottom: 2px solid #8b0000;
+    box-shadow: inset 0 0 10px #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav button {
+    background: linear-gradient(to bottom, #5c1e1e, #3c0f0f);
+    color: #f5e6c4;
+    padding: 10px 20px;
+    border: 2px solid #8b0000;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px #000;
+}
+
+nav button:hover {
+    background: #a52a2a;
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #8b0000;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(28, 21, 17, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffd700;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Selector de filtros */
+.selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.selector label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #f0e6d2;
+}
+
+.selector select, .selector button {
+    padding: 8px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Tabla de hechizos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+thead {
+    background-color: #8b0000;
+}
+
+thead th {
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #400000;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid #5e3a3a;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tbody td {
+    padding: 10px 12px;
+    color: #eee;
+    font-size: 15px;
+    border: 1px solid #3c1a1a;
+    text-align: center;
+}
+
+tbody td a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+tbody td a:hover {
+    color: #fff;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Druidas</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header> 
+    <h1>Druidas</h1>
+    <p>Ya sea invocando las fuerzas elementales de la naturaleza o emulando a las criaturas del mundo animal, los druidas son una encarnación de la resistencia, la astucia y la furia de la naturaleza. No pretenden dominar la naturaleza, sino que se ven a sí mismos como extensiones de la voluntad indomable de la naturaleza.</p>
+    <p>Debes tener una puntuación de Sabiduría de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+
+    <div class="section">
+        <h2>Tabla de Progresión del Druida</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Bono de competencia</th>
+                <th>Funciones</th>
+                <th>Cantrips Conocidos</th>
+                <th>1º</th>
+                <th>2º</th>
+                <th>3º</th>
+                <th>4º</th>
+                <th>5º</th>
+                <th>6º</th>
+                <th>7º</th>
+                <th>8º</th>
+                <th>9º</th>
+            </tr>
+            <tr>
+                <td>1º</td>
+                <td>+2</td>
+                <td>Druídico, Lanzamiento de hechizos</td>
+                <td>2</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- Repite las filas para cada nivel según la tabla proporcionada -->
+            <!-- ... -->
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d8 por nivel de druida</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 8 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d8 (o 5) + tu modificador de Constitución por nivel de druida después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Armadura ligera, armadura mediana, escudos (los druidas no usan armadura ni escudos hechos de metal)</li>
+            <li><strong>Armas:</strong> Bastones, dagas, dardos, jabalinas, mazas, bastones, cimitarras, hoces, hondas, lanzas</li>
+            <li><strong>Herramientas:</strong> Kit de herboristería</li>
+            <li><strong>Tiradas de salvación:</strong> Inteligencia, Sabiduría</li>
+            <li><strong>Habilidades:</strong> Elige dos de Arcanos, Manejo de Animales, Perspicacia, Medicina, Naturaleza, Percepción, Religión y Supervivencia</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu trasfondo:</p>
+        <ul>
+            <li>(a) un escudo de madera o (b) cualquier arma simple</li>
+            <li>(a) una cimitarra o (b) cualquier arma cuerpo a cuerpo simple</li>
+            <li>Armadura de cuero, un pack de explorador y un foco druídico</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Druídico</h2>
+        <p>Conoces el idioma secreto de los druidas, el Druídico. Puedes hablar el idioma y usarlo para dejar mensajes ocultos. Tú y otros que conozcan este idioma detectan automáticamente tales mensajes. Otros pueden detectar la presencia del mensaje con una tirada exitosa de Sabiduría (Percep) CD 15, pero no pueden descifrarlo sin magia.</p>
+    </div>
+
+    <div class="section">
+        <h2>Lanzamiento de Hechizos</h2>
+        <p>Dibujando la esencia divina de la naturaleza misma, puedes lanzar hechizos para moldear esa esencia a tu voluntad.</p>
+
+        <h3>Cantrips</h3>
+        <p>En el nivel 1, conoces dos cantrips de tu elección de la lista de hechizos de druida. Aprenderás cantrips de druida adicionales de tu elección en niveles más altos, como se muestra en la columna Cantrips Conocidos de la tabla de Druida.</p>
+
+        <h3>Preparación y Lanzamiento de Hechizos</h3>
+        <p>La tabla de Druida muestra cuántas ranuras de hechizos tienes para lanzar tus hechizos de druida de nivel 1 y superior. Para lanzar uno de estos hechizos, debes gastar una ranura del nivel del hechizo o superior. Recuperas todas las ranuras de hechizos gastadas cuando terminas un largo descanso.</p>
+
+        <h3>Habilidad de Lanzamiento de Hechizos</h3>
+        <p>La Sabiduría es tu habilidad de lanzamiento de hechizos para tus hechizos de druida, ya que tu magia se basa en tu devoción y conexión con la naturaleza. Usas tu Sabiduría siempre que un hechizo de druida se refiera a tu habilidad de lanzamiento de hechizos. Además, usas tu modificador de Sabiduría cuando estableces la CD de la tirada de salvación para un hechizo de druida que lanzas y cuando haces una tirada de ataque con uno.</p>
+        <p><strong>CD de salvación de hechizo = 8 + tu bonificación de competencia + tu modificador de Sabiduría</strong></p>
+        <p><strong>Modificador de ataque de hechizo = tu bonificación de competencia + tu modificador de Sabiduría</strong></p>
+
+        <h3>Lanzamiento Ritual</h3>
+        <p>Puedes lanzar un hechizo de druida como ritual si ese hechizo tiene la etiqueta de ritual y tienes el hechizo preparado.</p>
+
+        <h3>Enfoque de Lanzamiento de Hechizos</h3>
+        <p>Puedes usar un foco druídico como foco de lanzamiento de hechizos para tus hechizos de druida.</p>
+    </div>
+
+    <div class="section">
+        <h2>Forma Salvaje</h2>
+        <p>A partir del nivel 2, puedes usar tu acción para asumir mágicamente la forma de una bestia que hayas visto antes. Puedes usar esta característica dos veces. Recuperas los usos gastados cuando terminas un descanso corto o largo.</p>
+
+        <h3>Formas de Bestia</h3>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>CR Máximo</th>
+                <th>Limitaciones</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <td>2º</td>
+                <td>1/4</td>
+                <td>Sin velocidad de vuelo o natación</td>
+                <td>Lobo</td>
+            </tr>
+            <tr>
+                <td>4º</td>
+                <td>1/2</td>
+                <td>Sin velocidad de vuelo</td>
+                <td>Cocodrilo</td>
+            </tr>
+            <tr>
+                <td>8º</td>
+                <td>1</td>
+                <td>-</td>
+                <td>Águila gigante</td>
+            </tr>
+        </table>
+
+        <p>Puedes permanecer en forma de bestia durante un número de horas igual a la mitad de tu nivel de druida (redondeado hacia abajo). Luego vuelves a tu forma normal a menos que gastes otro uso de esta característica. Puedes volver a tu forma normal antes usando una acción de bonificación en tu turno. Vuelves automáticamente si caes inconsciente, reduces tus puntos de golpe a 0 o mueres.</p>
+    </div>
+
+    <div class="section">
+        <h2>Círculo de Druidas</h2>
+        <p>En el nivel 2, eliges identificarte con un círculo de druidas. Tu elección te otorga características en el nivel 2 y nuevamente en los niveles 6, 10 y 14.</p>
+
+        <h3>Círculos</h3>
+        <ul>
+            <li><strong>Sueños:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Tierra:</strong> Manual del Jugador</li>
+            <li><strong>Luna:</strong> Manual del Jugador</li>
+            <li><strong>Pastor:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Esporas:</strong> Guía del Maestro de la Hermandad de Ravnica</li>
+            <li><strong>Estrellas:</strong> El Caldero de Todo de Tasha</li>
+            <li><strong>Fuego Salvaje:</strong> El Caldero de Todo de Tasha</li>
+        </ul>
+    </div>
+
+        <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+<h2>Características por Nivel</h2>
+<div id="botones-caracteristicas">
+    <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+    <button onclick="filtrarCaracteristicas('1')">Nivel 1</button>
+    <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+    <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+    <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+    <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+    <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+    <button onclick="filtrarCaracteristicas('7')">Nivel 7</button>
+    <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+    <button onclick="filtrarCaracteristicas('9')">Nivel 9</button>
+    <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+    <button onclick="filtrarCaracteristicas('11')">Nivel 11</button>
+    <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+    <button onclick="filtrarCaracteristicas('13')">Nivel 13</button>
+    <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+    <button onclick="filtrarCaracteristicas('15')">Nivel 15</button>
+    <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+    <button onclick="filtrarCaracteristicas('17')">Nivel 17</button>
+    <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+    <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+    <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+</div>
+
+<table id="tabla-caracteristicas">
+    <thead>
+        <tr>
+            <th>Nivel</th>
+            <th>Característica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Generado dinámicamente -->
+    </tbody>
+</table>
+
+<script>
+const caracteristicas = [
+{ 
+    nivel: 2, 
+    nombre: "Compañero Salvaje (Opcional)", 
+    descripcion: "Obtienes la capacidad de invocar un espíritu que toma la forma de un animal: como acción, puedes gastar un uso de tu función Forma Salvaje para lanzar el hechizo Encontrar Familiar, sin componentes materiales. El familiar es un hada en lugar de una bestia y desaparece después de un número de horas igual a la mitad de tu nivel de druida." 
+  },
+  { 
+    nivel: 4, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad de tu elección en 2, o aumentar dos puntuaciones de habilidad en 1. No puedes aumentar una puntuación por encima de 20 usando esta función." 
+  },
+  { 
+    nivel: 4, 
+    nombre: "Versatilidad de Cantrip (Opcional)", 
+    descripcion: "Siempre que alcances un nivel que otorgue la función de mejora de puntuación de habilidad, puedes reemplazar un cantrip aprendido con otro de la lista de hechizos de druida." 
+  },
+  { 
+    nivel: 8, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad de tu elección en 2, o aumentar dos puntuaciones de habilidad en 1. No puedes aumentar una puntuación por encima de 20 usando esta función." 
+  },
+  { 
+    nivel: 12, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad de tu elección en 2, o aumentar dos puntuaciones de habilidad en 1. No puedes aumentar una puntuación por encima de 20 usando esta función." 
+  },
+  { 
+    nivel: 16, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad de tu elección en 2, o aumentar dos puntuaciones de habilidad en 1. No puedes aumentar una puntuación por encima de 20 usando esta función." 
+  },
+  { 
+    nivel: 18, 
+    nombre: "Cuerpo Atemporal", 
+    descripcion: "La magia primigenia que manejas hace que envejezcas más lentamente. Por cada 10 años que pasan, tu cuerpo envejece solo 1 año." 
+  },
+  { 
+    nivel: 18, 
+    nombre: "Hechizos de Bestia", 
+    descripcion: "Puedes lanzar muchos de tus hechizos de druida mientras estás en forma de bestia usando Forma Salvaje. Puedes realizar los componentes somáticos y verbales, pero no puedes proporcionar componentes materiales." 
+  },
+  { 
+    nivel: 19, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad de tu elección en 2, o aumentar dos puntuaciones de habilidad en 1. No puedes aumentar una puntuación por encima de 20 usando esta función." 
+  },
+  { 
+    nivel: 20, 
+    nombre: "Archidruida", 
+    descripcion: "Puedes usar tu Forma Salvaje un número ilimitado de veces. Además, puedes ignorar componentes verbales y somáticos de tus hechizos, así como cualquier componente material que no tenga coste ni sea consumido." 
+  }
+];
+
+
+function generarTabla(nivelFiltro = "todos") {
+    const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+    cuerpo.innerHTML = "";
+    caracteristicas.forEach(carac => {
+        if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${carac.nivel}</td>
+                <td>${carac.nombre}</td>
+                <td>${carac.descripcion}</td> 
+            `;
+            cuerpo.appendChild(fila);
+        }
+    });
+}
+
+function filtrarCaracteristicas(nivel) {
+    generarTabla(nivel);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    generarTabla();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Guardabosques (Rangers)</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Guardabosques (Rangers)</h1>
+    <p>Lejos del bullicio de las ciudades y los pueblos, más allá de los setos que protegen las granjas más lejanas de los terrores de la naturaleza, entre los densos árboles de los bosques sin senderos y a través de llanuras anchas y vacías, los guardabosques mantienen su vigilancia interminable.</p>
+    <p>Debes tener una puntuación de Destreza y una puntuación de Sabiduría de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+
+    <div class="section">
+        <h2>Tabla de Progresión del Guardabosque</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Bono de competencia</th>
+                <th>Funciones</th>
+                <th>Hechizos conocidos</th>
+                <th>1º</th>
+                <th>2º</th>
+                <th>3º</th>
+                <th>4º</th>
+                <th>5º</th>
+            </tr>
+            <tr>
+                <td>1º</td>
+                <td>+2</td>
+                <td>Enemigo favorito, Explorador natural, Explorador hábil (opcional), Enemigo favorito (opcional)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2º</td>
+                <td>+2</td>
+                <td>Estilo de lucha, Lanzamiento de hechizos, Enfoque de lanzamiento de hechizos (opcional)</td>
+                <td>2</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>3º</td>
+                <td>+2</td>
+                <td>Conciencia primigenia, Cónclave de guardabosques, Conciencia primigenia (opcional)</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>4º</td>
+                <td>+2</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>5º</td>
+                <td>+3</td>
+                <td>Ataque extra</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>6º</td>
+                <td>+3</td>
+                <td>Mejora de Enemigo Favorito, Mejora de Explorador Natural, Mejora de Explorador Hábil (Opcional)</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>7º</td>
+                <td>+3</td>
+                <td>Característica del Cónclave de Rangers</td>
+                <td>5</td>
+                <td>4</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>8º</td>
+                <td>+3</td>
+                <td>Mejora de la puntuación de habilidad, Zancada de la Tierra, Versatilidad marcial (opcional)</td>
+                <td>5</td>
+                <td>4</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>9º</td>
+                <td>+4</td>
+                <td>-</td>
+                <td>6</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>10º</td>
+                <td>+4</td>
+                <td>Mejora de Explorador Natural, Esconderse a la Vista, Función de Explorador Hábil (Opcional), Velo de la Naturaleza (Opcional)</td>
+                <td>6</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>11º</td>
+                <td>+4</td>
+                <td>Característica del Cónclave de Rangers</td>
+                <td>7</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>12º</td>
+                <td>+4</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>7</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>13º</td>
+                <td>+5</td>
+                <td>-</td>
+                <td>8</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>14º</td>
+                <td>+5</td>
+                <td>Mejora del Enemigo Favorito, Desvanecerse</td>
+                <td>8</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>15º</td>
+                <td>+5</td>
+                <td>Característica del Cónclave de Rangers</td>
+                <td>9</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>16º</td>
+                <td>+5</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>9</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>17º</td>
+                <td>+6</td>
+                <td>-</td>
+                <td>10</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>18º</td>
+                <td>+6</td>
+                <td>Sentidos salvajes</td>
+                <td>10</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>19º</td>
+                <td>+6</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>11</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>20º</td>
+                <td>+6</td>
+                <td>Asesino de enemigos</td>
+                <td>11</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d10 por nivel de guardabosque</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 10 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d10 (o 6) + tu modificador de Constitución por nivel de guardabosque después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Armadura ligera, armadura mediana, escudos</li>
+            <li><strong>Armas:</strong> Armas simples, armas marciales</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Fuerza, Destreza</li>
+            <li><strong>Habilidades:</strong> Elige tres de Manejo de animales, Atletismo, Perspicacia, Investigación, Naturaleza, Percepción, Sigilo y Supervivencia</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu trasfondo:</p>
+        <ul>
+            <li>(a) cota de escamas o (b) armadura de cuero</li>
+            <li>(a) dos espadas cortas o (b) dos armas cuerpo a cuerpo simples</li>
+            <li>(a) un pack de mazmorreo o (b) un pack de explorador</li>
+            <li>Un arco largo y una aljaba con 20 flechas</li>
+        </ul>
+    </div>
+
+            <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+<h2>Características por Nivel</h2>
+<div id="botones-caracteristicas">
+    <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+    <button onclick="filtrarCaracteristicas('1')">Nivel 1</button>
+    <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+    <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+    <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+    <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+    <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+    <button onclick="filtrarCaracteristicas('7')">Nivel 7</button>
+    <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+    <button onclick="filtrarCaracteristicas('9')">Nivel 9</button>
+    <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+    <button onclick="filtrarCaracteristicas('11')">Nivel 11</button>
+    <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+    <button onclick="filtrarCaracteristicas('13')">Nivel 13</button>
+    <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+    <button onclick="filtrarCaracteristicas('15')">Nivel 15</button>
+    <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+    <button onclick="filtrarCaracteristicas('17')">Nivel 17</button>
+    <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+    <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+    <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+</div>
+
+<table id="tabla-caracteristicas">
+    <thead>
+        <tr>
+            <th>Nivel</th>
+            <th>Característica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Generado dinámicamente -->
+    </tbody>
+</table>
+
+<script>
+const caracteristicas = [
+{
+    nivel: 1,
+    nombre: "Enemigo Favorito",
+    descripcion: "Tienes experiencia estudiando y rastreando a un tipo de enemigo. Elige un tipo de enemigo favorito y obtienes ventaja en rastreo e información. Aprendes idiomas asociados. Obtienes enemigos favoritos adicionales en niveles 6 y 14."
+  },
+  {
+    nivel: 1,
+    nombre: "Enemigo Favorito (Opcional)",
+    descripcion: "Cuando golpeas a una criatura, puedes marcarla como tu enemigo favorito durante 1 minuto o hasta perder concentración. Infliges daño extra (1d4 al principio, 1d6 a nivel 6 y 1d8 a nivel 14). Usos limitados por tu bonificación de competencia."
+  },
+  {
+    nivel: 1,
+    nombre: "Explorador Natural",
+    descripcion: "Eres experto viajando en un tipo de terreno favorito, ganando múltiples beneficios como moverte sigilosamente, no perderse, encontrar más comida y rastrear mejor. Ganas terrenos favoritos adicionales en niveles 6 y 10."
+  },
+  {
+    nivel: 1,
+    nombre: "Explorador Hábil (Opcional)",
+    descripcion: "Reemplaza Explorador Natural. Obtienes Astuto: duplicas tu competencia en una habilidad y aprendes dos idiomas. Más adelante obtienes Nómada (nivel 6) y Incansable (nivel 10)."
+  },
+  {
+    nivel: 2,
+    nombre: "Estilo de Lucha",
+    descripcion: "Adoptas un estilo de lucha: Arquería, Combate a Ciegas, Defensa, Guerrero Druídico, Duelo, Combate con Armas Arrojadizas o Combate con Dos Armas."
+  },
+  {
+    nivel: 2,
+    nombre: "Lanzamiento de Hechizos",
+    descripcion: "Aprendes a lanzar hechizos como un druida. Utilizas Sabiduría para lanzar y puedes usar un foco druídico para tus hechizos."
+  },
+  {
+    nivel: 3,
+    nombre: "Conciencia Primigenia",
+    descripcion: "Puedes detectar la presencia de ciertos tipos de criaturas gastando una ranura de hechizo. No revela ubicación o número."
+  },
+  {
+    nivel: 3,
+    nombre: "Conciencia Primigenia (Opcional)",
+    descripcion: "Reemplaza Conciencia Primigenia. Aprendes hechizos adicionales a niveles 3, 5, 9, 13 y 17. Puedes lanzarlos gratis una vez por descanso largo."
+  },
+  {
+    nivel: 3,
+    nombre: "Cónclave de Guardabosques",
+    descripcion: "Eliges un Cónclave como Maestro de Bestias, Hada Errante, Acechador Sombrío, Caminante del Horizonte, Cazador, Asesino de Monstruos, Guardián del Enjambre o Guardián del Dragón."
+  },
+  {
+    nivel: 4,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos en 1. No puedes superar 20."
+  },
+  {
+    nivel: 4,
+    nombre: "Versatilidad Marcial (Opcional)",
+    descripcion: "Cuando obtienes una mejora de puntuación, puedes reemplazar un estilo de lucha conocido por otro."
+  },
+  {
+    nivel: 5,
+    nombre: "Ataque Extra",
+    descripcion: "Puedes atacar dos veces, en lugar de una, siempre que realices la acción de Ataque en tu turno."
+  },
+  {
+    nivel: 8,
+    nombre: "Zancada de la Tierra",
+    descripcion: "Ignoras terreno difícil no mágico y obtienes ventaja en salvaciones contra plantas mágicamente creadas o manipuladas."
+  },
+  {
+    nivel: 10,
+    nombre: "Esconderse a la Vista",
+    descripcion: "Puedes camuflarte y obtener un +10 en tiradas de Destreza (Sigilo) mientras no te muevas."
+  },
+  {
+    nivel: 10,
+    nombre: "Velo de la Naturaleza (Opcional)",
+    descripcion: "Reemplaza Esconderse a la Vista. Como acción de bonificación, puedes volverte invisible hasta el comienzo de tu próximo turno."
+  },
+  {
+    nivel: 14,
+    nombre: "Desvanecerse",
+    descripcion: "Puedes usar la acción de Esconderse como acción de bonificación y no puedes ser rastreado por medios no mágicos."
+  },
+  {
+    nivel: 18,
+    nombre: "Sentidos Salvajes",
+    descripcion: "Cuando atacas a una criatura invisible, no sufres desventaja. Percibes criaturas invisibles a menos de 30 pies si no estás cegado ni sordo."
+  },
+  {
+    nivel: 20,
+    nombre: "Asesino de Enemigos",
+    descripcion: "Una vez por turno, puedes añadir tu modificador de Sabiduría a una tirada de ataque o daño contra un enemigo favorito."
+  }
+];
+
+
+function generarTabla(nivelFiltro = "todos") {
+    const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+    cuerpo.innerHTML = "";
+    caracteristicas.forEach(carac => {
+        if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${carac.nivel}</td>
+                <td>${carac.nombre}</td>
+                <td>${carac.descripcion}</td> 
+            `;
+            cuerpo.appendChild(fila);
+        }
+    });
+}
+
+function filtrarCaracteristicas(nivel) {
+    generarTabla(nivel);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    generarTabla();
+});
+</script>
+</body>
+</html>

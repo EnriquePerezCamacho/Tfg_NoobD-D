@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechizos de Bardo</title>
+    <link rel="stylesheet" href="StyleHechizos.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><button onclick="location.href='../index.html'">Inicio</button></li>
+                <li><button onclick="location.href='../clases.html'">Clases</button></li>
+                <li><button onclick="location.href='../razas.html'">Razas</button></li>
+                <li><button onclick="location.href='../../subclases.html'">SubClases</button></li>
+                <li><button onclick="location.href='../Fichas/fichaautocomple.html'">Fichas</button></li>
+                <li><button>Help</button></li>
+                <li><button id="profileButton">Perfil</button></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
+</header>
+    <h1>Hechizos de Bardo</h1>
+
+    <!-- Botones para seleccionar el nivel -->
+    <div id="botones-niveles">
+        <button onclick="actualizarTabla('Cantrip')">Cantrip</button>
+        <button onclick="actualizarTabla('1Lvl')">Nivel 1</button>
+        <button onclick="actualizarTabla('2Lvl')">Nivel 2</button>
+        <button onclick="actualizarTabla('3Lvl')">Nivel 3</button>
+        <button onclick="actualizarTabla('4Lvl')">Nivel 4</button>
+        <button onclick="actualizarTabla('5Lvl')">Nivel 5</button>
+        <button onclick="actualizarTabla('6Lvl')">Nivel 6</button>
+        <button onclick="actualizarTabla('7Lvl')">Nivel 7</button>
+        <button onclick="actualizarTabla('8Lvl')">Nivel 8</button>
+        <button onclick="actualizarTabla('9Lvl')">Nivel 9</button>
+    </div>
+
+    <h2>Hechizos</h2>
+    <table id="tabla-hechizos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Escuela</th>
+                <th>Tiempo de Casting</th>
+                <th>Gama</th>
+                <th>Duración</th>
+                <th>Componentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON con los hechizos del Bardo
+        const hechizos = 
+        {
+  "1st Level": [
+    {
+      "nombre": "Bendecir",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_bendecir.html"
+    },
+    {
+      "nombre": "Ceremonia",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_ceremonia.html"
+    },
+    {
+      "nombre": "Mandar",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "1 ronda",
+      "componentes": "V",
+      "enlace": "hechizo_mandar.html"
+    },
+    {
+      "nombre": "Duelo obligado",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "30 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_duelo_obligado.html"
+    },
+    {
+      "nombre": "Curar heridas",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_curar_heridas.html"
+    },
+    {
+      "nombre": "Detectar el mal y el bien",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S",
+      "enlace": "hechizo_detectar_mal_bien.html"
+    },
+    {
+      "nombre": "Detectar magia",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S",
+      "enlace": "hechizo_detectar_magia.html"
+    },
+    {
+      "nombre": "Detectar venenos y enfermedades",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_detectar_venenos.html"
+    },
+    {
+      "nombre": "Favor Divino",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S",
+      "enlace": "hechizo_favor_divino.html"
+    },
+    {
+      "nombre": "Heroísmo",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S",
+      "enlace": "hechizo_heroismo.html"
+    },
+    {
+      "nombre": "Protección contra el mal y el bien",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_proteccion_mal_bien.html"
+    },
+    {
+      "nombre": "Purificar alimentos y bebidas",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "10 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_purificar_alimentos.html"
+    },
+    {
+      "nombre": "Castigo abrasador",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_abrasador.html"
+    },
+    {
+      "nombre": "Escudo de la fe",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "60 pies",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_escudo_fe.html"
+    },
+    {
+      "nombre": "Castigo atronador",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_atronador.html"
+    },
+    {
+      "nombre": "Castigo iracundo",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_iracundo.html"
+    }
+  ],
+  "2nd Level": [
+    {
+      "nombre": "Ayuda",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 Pies",
+      "duracion": "8 horas",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_ayuda.html"
+    },
+    {
+      "nombre": "Castigo de marca",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_marca.html"
+    },
+    {
+      "nombre": "Buscar corcel",
+      "escuela": "Conjuro",
+      "tiempo_casting": "10 minutos",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_buscar_corcel.html"
+    },
+    {
+      "nombre": "Buscar vehículo (UA)",
+      "escuela": "Conjuro T",
+      "tiempo_casting": "10 minutos",
+      "gama": "30 pies",
+      "duracion": "8 horas",
+      "componentes": "V, S",
+      "enlace": "hechizo_buscar_vehiculo.html"
+    },
+    {
+      "nombre": "Reposo apacible",
+      "escuela": "Necromancia",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Toque",
+      "duracion": "10 días",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_reposo_apacible.html"
+    },
+    {
+      "nombre": "Restauración menor",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_restauracion_menor.html"
+    },
+    {
+      "nombre": "Localizar objeto",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_localizar_objeto.html"
+    },
+    {
+      "nombre": "Arma mágica",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S",
+      "enlace": "hechizo_arma_magica.html"
+    },
+    {
+      "nombre": "Oración de Sanación",
+      "escuela": "Evocación",
+      "tiempo_casting": "10 minutos",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V",
+      "enlace": "hechizo_oracion_sanacion.html"
+    },
+    {
+      "nombre": "Protección contra el veneno",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 hora",
+      "componentes": "V, S",
+      "enlace": "hechizo_proteccion_veneno.html"
+    },
+    {
+      "nombre": "Fianza de protección",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 hora",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_fianza_proteccion.html"
+    },
+    {
+      "nombre": "Zona de la Verdad",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "10 minutos",
+      "componentes": "V, S",
+      "enlace": "hechizo_zona_verdad.html"
+    }
+  ],
+  "3rd Level": [
+    {
+      "nombre": "Aura de vitalidad",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Yo (radio de 30 pies)",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_aura_vitalidad.html"
+    },
+    {
+      "nombre": "Castigo cegador",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_cegador.html"
+    },
+    {
+      "nombre": "Crear comida y agua",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_crear_comida.html"
+    },
+    {
+      "nombre": "Manto de cruzado",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_manto_cruzado.html"
+    },
+    {
+      "nombre": "Luz del día",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "1 hora",
+      "componentes": "V, S",
+      "enlace": "hechizo_luz_dia.html"
+    },
+    {
+      "nombre": "Disipar magia",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_disipar_magia.html"
+    },
+    {
+      "nombre": "Arma elemental",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S",
+      "enlace": "hechizo_arma_elemental.html"
+    },
+    {
+      "nombre": "Círculo Mágico",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 minuto",
+      "gama": "10 pies",
+      "duracion": "1 hora",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_circulo_magico.html"
+    },
+    {
+      "nombre": "Eliminar maldición",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_eliminar_maldicion.html"
+    },
+    {
+      "nombre": "Revivificar",
+      "escuela": "Necromancia",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_revivificar.html"
+    },
+    {
+      "nombre": "Sudario espiritual",
+      "escuela": "Necromancia",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S",
+      "enlace": "hechizo_sudario_espiritual.html"
+    }
+  ],
+  "4th Level": [
+    {
+      "nombre": "Aura de vida",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Yo (radio de 30 pies)",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V",
+      "enlace": "hechizo_aura_vida.html"
+    },
+    {
+      "nombre": "Aura de pureza",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Yo (radio de 30 pies)",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V",
+      "enlace": "hechizo_aura_pureza.html"
+    },
+    {
+      "nombre": "Destierro",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_destierro.html"
+    },
+    {
+      "nombre": "Resguardo de la muerte",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "8 horas",
+      "componentes": "V, S",
+      "enlace": "hechizo_resguardo_muerte.html"
+    },
+    {
+      "nombre": "Encuentra un corcel mayor",
+      "escuela": "Conjuro",
+      "tiempo_casting": "10 minutos",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S",
+      "enlace": "hechizo_corcel_mayor.html"
+    },
+    {
+      "nombre": "Localizar criatura",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_localizar_criatura.html"
+    },
+    {
+      "nombre": "Castigo asombroso",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_asombroso.html"
+    }
+  ],
+  "5th Level": [
+    {
+      "nombre": "Castigo desterrador",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V",
+      "enlace": "hechizo_castigo_desterrador.html"
+    },
+    {
+      "nombre": "Círculo de Poder",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Yo (radio de 30 pies)",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V",
+      "enlace": "hechizo_circulo_poder.html"
+    },
+    {
+      "nombre": "Ola destructiva",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Yo (radio de 30 pies)",
+      "duracion": "Instantáneo",
+      "componentes": "V",
+      "enlace": "hechizo_ola_destructiva.html"
+    },
+    {
+      "nombre": "Disipar el mal y el bien",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_disipar_mal_bien.html"
+    },
+    {
+      "nombre": "Geas",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 minuto",
+      "gama": "60 pies",
+      "duracion": "30 días",
+      "componentes": "V",
+      "enlace": "hechizo_geas.html"
+    },
+    {
+      "nombre": "Arma sagrada",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S",
+      "enlace": "hechizo_arma_sagrada.html"
+    },
+    {
+      "nombre": "Resucitar a los muertos",
+      "escuela": "Necromancia",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_resucitar_muertos.html"
+    },
+    {
+      "nombre": "Invocar Celestial",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_invocar_celestial.html"
+    }
+  ]            
+        };
+
+        // Función para actualizar la tabla según el nivel seleccionado
+        function actualizarTabla(nivel) {
+            const tablaHechizos = document.getElementById('tabla-hechizos').getElementsByTagName('tbody')[0];
+            tablaHechizos.innerHTML = ""; // Limpiar la tabla antes de agregar las filas
+
+            hechizos[nivel].forEach(hechizo => {
+                const row = tablaHechizos.insertRow();
+                row.innerHTML = `
+                    <td><a href="${hechizo.enlace}">${hechizo.nombre}</a></td>
+                    <td>${hechizo.escuela}</td>
+                    <td>${hechizo.tiempo_casting}</td>
+                    <td>${hechizo.gama}</td>
+                    <td>${hechizo.duracion}</td>
+                    <td>${hechizo.componentes}</td>
+                `;
+            });
+        }
+
+        // Inicializar la tabla con los hechizos de Cantrip
+        actualizarTabla("Cantrip");
+    </script>
+</body>
+</html>

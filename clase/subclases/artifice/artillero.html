@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artillero - Subclase de Artífice</title>
+    <link rel="stylesheet" href="../StyleSubclase.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Dominio de la Herramienta</h2>
+        <p>Cuando adoptas esta especialización en el 3er nivel, adquieres competencia con las herramientas de tallador de madera. Si ya tienes esta habilidad, obtienes competencia con otro tipo de herramientas artesanales de tu elección.</p>
+    </section>
+
+    <section>
+        <h2>Hechizos de Artillero</h2>
+        <p>A partir del 3er nivel, siempre tienes ciertos hechizos preparados después de alcanzar niveles particulares en esta clase, como se muestra en la tabla de Hechizos de Artillero. Estos hechizos cuentan como hechizos de artífice para ti, pero no cuentan para el número de hechizos de artífice que prepares.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nivel de Artífice</th>
+                    <th>Hechizos de Artillero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3º</td>
+                    <td>Escudo, Onda de Trueno</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>Rayo Abrasador, Fragmento</td>
+                </tr>
+                <tr>
+                    <td>9º</td>
+                    <td>Bola de Fuego, Muro de Viento</td>
+                </tr>
+                <tr>
+                    <td>13º</td>
+                    <td>Tormenta de Hielo, Muro de Fuego</td>
+                </tr>
+                <tr>
+                    <td>17º</td>
+                    <td>Cono de Frío, Muro de Fuerza</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Cañón Sobrenatural</h2>
+        <p>También en el 3er nivel, has aprendido a crear un cañón mágico. Usando las herramientas del tallador de madera o las herramientas del herrero, puedes realizar una acción para crear mágicamente un cañón sobrenatural pequeño o diminuto en un espacio desocupado en una superficie horizontal a menos de 5 pies de ti. Un pequeño cañón sobrenatural ocupa su espacio, y uno pequeño se puede sostener con una mano. Una vez que creas un cañón, no puedes volver a hacerlo hasta que termines un largo descanso o hasta que gastes una ranura de hechizo para crear uno. Solo puedes tener un cañón a la vez y no puedes crear uno mientras tu cañón esté presente.</p>
+        <p>El cañón es un objeto mágico. Independientemente del tamaño, el cañón tiene una CA de 18 y un número de puntos de vida igual a cinco veces tu nivel de artífice. Es inmune al daño por envenenamiento y al daño psíquico. Si se ve obligado a hacer una prueba de habilidad o una tirada de salvación, trata todas sus puntuaciones de habilidad como 10 (+0). Si se lanza el hechizo de reparación sobre él, recupera 2d6 puntos de golpe. Desaparece si se reduce a 0 puntos de vida o después de 1 hora. Puedes descartarlo antes de tiempo como una acción.</p>
+        <p>Cuando creas el cañón, determinas su apariencia y si tiene patas. También decides de qué tipo es, eligiendo entre las opciones de la tabla de Cañones sobrenaturales. En cada uno de tus turnos, puedes realizar una acción de bonificación para hacer que el cañón se active si estás a menos de 60 pies de él. Como parte de la misma acción de bonificación, puede dirigir el cañón para que camine o suba hasta 15 pies a un espacio desocupado, siempre que tenga patas.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cañón</th>
+                    <th>Activación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lanzallamas</td>
+                    <td>El cañón exhala fuego en un cono adyacente de 15 pies que usted designe. Cada criatura en esa área debe hacer una tirada de salvación de Destreza contra tu CD de salvación de hechizo, recibiendo 2d8 puntos de daño de fuego en una salvación fallida o la mitad de daño en una exitosa. El fuego enciende cualquier objeto inflamable en el área que no se esté usando o transportando.</td>
+                </tr>
+                <tr>
+                    <td>Balista de la Fuerza</td>
+                    <td>Realiza un ataque de hechizo a distancia, originado desde el cañón, a una criatura u objeto en un radio de 120 pies de él. En un golpe, el objetivo recibe 2d8 de daño de fuerza, y si el objetivo es una criatura, es empujado hasta 5 pies lejos del cañón.</td>
+                </tr>
+                <tr>
+                    <td>Protector</td>
+                    <td>El cañón emite una ráfaga de energía positiva que se otorga a sí mismo y a cada criatura de tu elección a menos de 10 pies de él un número de puntos de golpe temporales igual a 1d8 + tu modificador de Inteligencia (mínimo de +1).</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Arma de Fuego Arcana</h2>
+        <p>En el 5º nivel, sabes cómo convertir una varita, un bastón o una vara en un arma de fuego arcana, un conducto para tus hechizos destructivos. Cuando termines un largo descanso, puedes usar las herramientas del tallador de madera para tallar sigilos especiales en una varita, un bastón o una vara y, por lo tanto, convertirlo en tu arma de fuego arcana. Los sigilos desaparecen del objeto si más tarde los tallas en un objeto diferente. De lo contrario, los sigilos duran indefinidamente.</p>
+        <p>Puedes usar tu arma de fuego arcana como foco de lanzamiento de hechizos para tus hechizos de artífice. Cuando lanzas un hechizo de artífice a través del arma de fuego, tira un d8 y obtienes una bonificación a una de las tiradas de daño del hechizo igual al número tirado.</p>
+    </section>
+
+    <section>
+        <h2>Cañón Explosivo</h2>
+        <p>A partir del nivel 9, cada cañón sobrenatural que creas es más destructivo:</p>
+        <ul>
+            <li>Todas las tiradas de daño del cañón aumentan en 1d8.</li>
+            <li>Como acción, puedes ordenar que el cañón detone si estás a menos de 60 pies de él. Al hacerlo, destruyes el cañón y obliga a cada criatura a estar a menos de 20 pies de él a realizar una tirada de salvación de Destreza contra tu CD de salvación de hechizo, recibiendo 3d8 de daño de fuerza en una salvación fallida o la mitad de daño en una exitosa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Posición Fortificada</h2>
+        <p>En el nivel 15, eres un maestro en la formación de emplazamientos bien defendidos con el Cañón sobrenatural:</p>
+        <ul>
+            <li>Tú y tus aliados tenéis la mitad de la cobertura mientras estáis a menos de 10 pies de un cañón que creéis con Cañón sobrenatural, como resultado de un brillante campo de protección mágica que emite el cañón.</li>
+            <li>Ahora puedes tener dos cañones al mismo tiempo. Puedes crear dos con la misma acción (pero no con la misma ranura de hechizo), y puedes activar ambos con la misma acción de bonificación. Usted determina si los cañones son idénticos entre sí o diferentes. No puedes crear un tercer cañón mientras tienes dos.</li>
+        </ul>
+    </section>
+
+</body>
+</html>

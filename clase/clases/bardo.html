@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bardo</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <h1>Bardo</h1>
+    </header>   
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Ya sea un erudito, un escaldo o un sinvergüenza, un bardo teje magia a través de las palabras y la música para inspirar a los aliados, desmoralizar a los enemigos, manipular las mentes, crear ilusiones e incluso curar heridas. El bardo es un maestro del canto, el habla y la magia que contienen.</p>
+            <p>Debes tener una puntuación de Carisma de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+        </section> 
+
+        <section>
+            <h2>Tabla de progresión del Bardo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nivel</th>
+                        <th>Bono de competencia</th>
+                        <th>Funciones</th>
+                        <th>Cantrips conocidos</th>
+                        <th>Hechizos conocidos</th>
+                        <th>1º</th>
+                        <th>2º</th>
+                        <th>3º</th>
+                        <th>4º</th>
+                        <th>5º</th>
+                        <th>6º</th>
+                        <th>7º</th>
+                        <th>8º</th>
+                        <th>9º</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>+2</td>
+                        <td>Lanzamiento de hechizos, Inspiración bárdica (d6)</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>+2</td>
+                        <td>Aprendiz de todos los oficios, Canción del descanso (d6), Inspiración mágica (opcional)</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <!-- Agregar el resto de filas aquí -->
+                </tbody>
+            </table>
+        </section>
+
+        <h2 class="section-title">Grimorio de la Biblioteca de Hechizos</h2>
+    <a href="../../HechizosClases/HArtifice.html" class="btn">Aprende los Hechizos que puedes encontrar en los Grimorios</a>
+
+        <section>
+            <h2>Características de la Clase</h2>
+        <h3>Puntos de vida</h3>
+        <p><strong>Dados de golpe:</strong> 1d8 por nivel de bardo</p>
+        <p><strong>Puntos de golpe en el 1er nivel:</strong> 8 + tu modificador de Constitución</p>
+        <p><strong>Puntos de golpe en niveles superiores:</strong> 1d8 (o 5) + tu modificador de Constitución por nivel de bardo después del 1er nivel</p>
+        <h3>Competencias</h3>
+        <p><strong>Armadura:</strong> Armadura ligera</p>
+        <p><strong>Armas:</strong> Armas simples, ballestas de mano, espadas largas, estoques, espadas cortas</p>
+        <p><strong>Herramientas:</strong> Tres instrumentos musicales de tu elección</p>
+        <p><strong>Tiradas de salvación:</strong> Destreza, Carisma</p>
+        <p><strong>Habilidades:</strong> Elige tres cualesquiera</p>
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu experiencia:</p>
+        <ul>
+            <li>(a) un estoque, (b) una espada larga, o (c) cualquier arma simple</li>
+            <li>(a) una mochila de diplomático o (b) una mochila de artista</li>
+            <li>(a) un laúd o (b) cualquier otro instrumento musical</li>
+            <li>Armadura de cuero y una daga</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Lanzamiento de hechizos</h2>
+        <p>Has aprendido a desenredar y remodelar el tejido de la realidad en armonía con tus deseos y tu música. Tus hechizos forman parte de tu vasto repertorio, magia que puedes afinar en diferentes situaciones.</p>
+        <h3>Cantrips</h3>
+        <p>Conoces dos cantrips de tu elección de la lista de hechizos de bardo. Aprenderás cantrips de bardo adicionales de tu elección en niveles superiores, como se muestra en la columna Cantrips conocidos de la tabla de Bard.</p>
+
+        <h3>Ranuras de hechizos</h3>
+        <p>La tabla de Bardo muestra cuántas ranuras de hechizos tienes para lanzar tus hechizos de Bardo de nivel 1 y superior. Para lanzar uno de estos hechizos, debes gastar una ranura del nivel del hechizo o superior. Recuperas todas las ranuras de hechizos gastadas cuando terminas un largo descanso. Por ejemplo, si conoces el hechizo de nivel 1 <em>Cura heridas</em> y tienes una ranura de hechizo de nivel 1 y otra de nivel 2 disponibles, puedes lanzar <em>Cura heridas</em> usando cualquiera de las ranuras.</p>
+
+        <h3>Hechizos conocidos de nivel 1 y superior</h3>
+        <p>Conoces cuatro hechizos de nivel 1 de tu elección de la lista de hechizos de bardo.</p>
+        <p>La columna Hechizos conocidos de la tabla de Bardo muestra cuándo aprendes más hechizos de bardo de tu elección. Cada uno de estos hechizos debe ser de un nivel para el que tengas ranuras de hechizos, como se muestra en la tabla. Por ejemplo, cuando alcanzas el 3er nivel en esta clase, puedes aprender un nuevo hechizo del 1er o 2do nivel.</p>
+        <p>Además, cuando subes de nivel en esta clase, puedes elegir uno de los hechizos de bardo que conoces y reemplazarlo con otro hechizo de la lista de hechizos de bardo, que también debe ser de un nivel para el que tengas ranuras de hechizos.</p>
+
+        <h3>Habilidad de lanzamiento de hechizos</h3>
+        <p>El carisma es tu habilidad de lanzar hechizos para tus hechizos de bardo. Tu magia proviene del corazón y el alma que pones en la interpretación de tu música o oración. Usas tu Carisma siempre que un hechizo se refiera a tu habilidad de lanzamiento de hechizos. Además, usas tu modificador de Carisma cuando estableces la CD de la tirada de salvación para un hechizo de bardo que lanzas y cuando haces una tirada de ataque con uno.</p>
+        <p><strong>Salvación de hechizo CD =</strong> 8 + tu bonificación de competencia + tu modificador de Carisma</p>
+        <p><strong>Modificador de ataque de hechizo =</strong> tu bonificación de competencia + tu modificador de carisma</p>
+
+        <h3>Lanzamiento ritual</h3>
+        <p>Puedes lanzar cualquier hechizo de bardo que conozcas como ritual si ese hechizo tiene la etiqueta de ritual.</p>
+
+        <h3>Enfoque de lanzamiento de hechizos</h3>
+        <p>Puedes usar un instrumento musical (que se encuentra en el capítulo 5) como foco de lanzamiento de hechizos para tus hechizos de bardo.</p>
+
+        <h3>Inspiración bárdica</h3>
+        <p>Puedes inspirar a otros a través de palabras conmovedoras o música. Para hacerlo, usas una acción de bonificación en tu turno para elegir una criatura que no seas tú a menos de 60 pies de ti y que pueda escucharte. Esa criatura gana un dado de Inspiración Bárdica, un d6.</p>
+        <p>Una vez dentro de los próximos 10 minutos, la criatura puede tirar el dado y sumar el número sacado a una prueba de habilidad, tirada de ataque o tirada de salvación que haga. La criatura puede esperar hasta después de tirar el d20 antes de decidir usar el dado de Inspiración Bárdica, pero debe decidir antes de que el DM diga si la tirada tiene éxito o falla. Una vez que se tira el dado de Inspiración Bárdica, se pierde. Una criatura solo puede tener un dado de Inspiración Bárdica a la vez.</p>
+        <p>Puedes usar esta función un número de veces igual a tu modificador de Carisma (un mínimo de una vez). Recuperas los usos gastados cuando terminas un descanso prolongado.</p>
+        <p>Tu dado de Inspiración Bárdica cambia cuando alcanzas ciertos niveles en esta clase. El dado se convierte en un d8 en el 5º nivel, un d10 en el 10º nivel y un d12 en el 15º nivel.</p>
+
+        <h3>Todólogo</h3>
+        <p>A partir del 2º nivel, puedes añadir la mitad de tu bonificación de competencia, redondeada hacia abajo, a cualquier prueba de habilidad que realices que no incluya ya tu bonificación de competencia.</p>
+
+        <h3>Canción del descanso</h3>
+        <p>A partir del 2º nivel, puedes usar música relajante o oraciones para ayudar a revitalizar a tus aliados heridos durante un breve descanso. Si tú o cualquier criatura aliada que pueda oír tu actuación recuperan puntos de golpe al final del breve descanso gastando uno o más Dados de Golpe, cada una de esas criaturas recupera 1d6 puntos de golpe extra.</p>
+        <p>Los puntos de golpe adicionales aumentan cuando alcanzas ciertos niveles en esta clase: a 1d8 en el 9º nivel, a 1d10 en el nivel 13 y a 1d12 en el nivel 17.</p>
+
+        <h3>Inspiración mágica (opcional)</h3>
+        <p>En el nivel 2, si una criatura tiene un dado de Inspiración Bárdica de ti y lanza un hechizo que restaura puntos de golpe o inflige daño, la criatura puede tirar ese dado y elegir un objetivo afectado por el hechizo. Añade el número obtenido como bonificación a los puntos de golpe recuperados o al daño infligido. El dado de Inspiración Bárdica se pierde entonces.</p>
+
+        <h2 class="section-title">Furia Ancestral: El Legado de los Guerreros sin Límites</h2>
+        <a href="../../HechizosClases/HArtifice.html" class="btn">Rugidos de la Batalla Salvaje</a>
+
+        <h2>Colegio de Bardos</h2>
+    <p>En el 3er nivel, profundizas en las técnicas avanzadas de un colegio de bardos de tu elección. Su elección le otorga funciones en el 3er nivel y nuevamente en el 6to y 14to nivel.</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Universidad</th>
+                <th>Fuente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Creación</td>
+                <td>El caldero de todo de Tasha</td>
+            </tr>
+            <tr>
+                <td>Elocuencia</td>
+                <td>Odiseas míticas de Theros, El caldero de todo de Tasha</td>
+            </tr>
+            <tr>
+                <td>Glamur</td>
+                <td>Guía de Xanathar para todo</td>
+            </tr>
+            <tr>
+                <td>Erudición</td>
+                <td>Manual del jugador</td>
+            </tr>
+            <tr>
+                <td>Licor</td>
+                <td>Guía de Van Richten sobre Ravenloft</td>
+            </tr>
+            <tr>
+                <td>Espadas</td>
+                <td>Guía de Xanathar para todo</td>
+            </tr>
+            <tr>
+                <td>Valor</td>
+                <td>Manual del jugador</td>
+            </tr>
+            <tr>
+                <td>Susurros</td>
+                <td>Guía de Xanathar para todo, Arcanos desenterrados archivados</td>
+            </tr>
+            <tr>
+                <td>Mago de Feudo del Saber</td>
+                <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+            </tr>
+            <tr>
+                <td>Mago de Pluma de Plata</td>
+                <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+            </tr>
+            <tr>
+                <td>Creación</td>
+                <td>Arcanos Desenterrados 68 - Subclases, Parte 2</td>
+            </tr>
+            <tr>
+                <td>Licor</td>
+                <td>Arcanos Desenterrados 74 - Subclases, Parte 4</td>
+            </tr>
+            <tr>
+                <td>Sátira</td>
+                <td>Arcanos Desenterrados 12 - Kits de antaño</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+<h2>Características por Nivel</h2>
+<div id="botones-caracteristicas">
+    <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+    <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+    <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+    <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+    <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+    <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+    <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+    <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+    <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+    <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+    <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+    <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+    <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+    <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+</div>
+
+<table id="tabla-caracteristicas">
+    <thead>
+        <tr>
+            <th>Nivel</th>
+            <th>Característica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Generado dinámicamente -->
+    </tbody>
+</table>
+    </section>
+    <script>
+        const caracteristicasBardo = [
+            { nivel: 2, nombre: "Todólogo", descripcion: "Añade la mitad de tu competencia a pruebas sin competencia." },
+            { nivel: 2, nombre: "Canción del descanso", descripcion: "Aliados recuperan +1d6 PG en descansos cortos. Escala con el nivel." },
+            { nivel: 2, nombre: "Inspiración mágica (opcional)", descripcion: "El dado de Inspiración puede aumentar daño o curación de un hechizo." },
+            { nivel: 3, nombre: "Pericia", descripcion: "Elige 2 habilidades para duplicar la competencia." },
+            { nivel: 4, nombre: "Mejora de la puntuación de habilidad", descripcion: "Aumenta puntuaciones de habilidad en 2 o dos en 1. Máx 20." },
+            { nivel: 4, nombre: "Versatilidad de Bardic (opcional)", descripcion: "Reemplaza una Pericia o un truco cuando ganes una mejora de puntuación." },
+            { nivel: 5, nombre: "Fuente de inspiración", descripcion: "Recuperas Inspiración Bárdica con descanso corto o largo." },
+            { nivel: 6, nombre: "Contraencanto", descripcion: "Otorga ventaja contra miedo y encantamiento a aliados cercanos mientras actúas." },
+            { nivel: 8, nombre: "Mejora de la puntuación de habilidad", descripcion: "Igual que en nivel 4." },
+            { nivel: 10, nombre: "Pericia", descripcion: "Elige otras dos habilidades para duplicar la competencia." },
+            { nivel: 10, nombre: "Secretos mágicos", descripcion: "Elige 2 hechizos de cualquier clase como tuyos." },
+            { nivel: 12, nombre: "Mejora de la puntuación de habilidad", descripcion: "Igual que en nivel 4." },
+            { nivel: 14, nombre: "Secretos mágicos", descripcion: "Elige 2 hechizos más de cualquier clase." },
+            { nivel: 16, nombre: "Mejora de la puntuación de habilidad", descripcion: "Igual que en nivel 4." },
+            { nivel: 18, nombre: "Secretos mágicos", descripcion: "Elige 2 hechizos más de cualquier clase." },
+            { nivel: 19, nombre: "Mejora de la puntuación de habilidad", descripcion: "Igual que en nivel 4." },
+            { nivel: 20, nombre: "Inspiración superior", descripcion: "Recuperas un uso de Inspiración Bárdica al tirar iniciativa si no te quedan." }
+        ];
+        
+        function generarTabla(nivelFiltro = "todos") {
+    const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+    cuerpo.innerHTML = "";
+    caracteristicasBardo.forEach(carac => {
+        if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${carac.nivel}</td>
+                <td>${carac.nombre}</td>
+                <td>${carac.descripcion}</td> 
+            `;
+            cuerpo.appendChild(fila);
+        }
+    });
+}
+        
+        function filtrarCaracteristicas(nivel) {
+            generarTabla(nivel);
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            generarTabla();
+        });
+        </script>
+    </main>
+</body>
+</html>

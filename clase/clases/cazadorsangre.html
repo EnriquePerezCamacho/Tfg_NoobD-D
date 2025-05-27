@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazador de Sangre</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Cazadores de Sangre</h1>
+        <p>
+            Los cazadores de sangre son guerreros astutos impulsados por una determinación interminable de destruir los males antiguos y nuevos. 
+            Armados con ritos de magia de sangre secreta y dispuestos a sacrificar su propia vitalidad y humanidad por su causa, 
+            protegen los reinos de las sombras, incluso mientras permanecen siempre vigilantes para no ser atraídos por la oscuridad que consume a los monstruos que cazan.
+        </p>
+        <p><strong>Fuente:</strong> DND Beyond</p>
+
+        <h2>Requisitos</h2>
+        <p>
+            Debes tener una puntuación de <strong>Inteligencia</strong> de 13 o superior y una puntuación de <strong>Fuerza</strong> o 
+            <strong>Destreza</strong> de 13 o superior para poder entrar o salir de esta clase en varias clases.
+        </p>
+
+        <p>
+            Si tu cazador de sangre es parte de la Orden del Alma Profana y también tiene niveles de brujo, 
+            agrega un tercio de tus niveles de cazador de sangre (redondeado hacia abajo) a tu nivel de brujo y consulta la tabla de progresión de brujos para conocer el total de ranuras de hechizos, los cantrips conocidos y el nivel de las ranuras de hechizos. 
+            Deberías considerar alinear tu característica de Patrón de Otro Mundo entre ambas clases, pero tu DM podría permitirte tener dos patrones diferentes a su discreción.
+        </p>
+
+        <h2>Puntuación de Habilidad Variante de Hemocraft</h2>
+        <p>
+            Como cazador de sangre, usas tu modificador de <strong>Inteligencia</strong> para algunas de las características de tu clase y subclase. 
+            Sin embargo, con el permiso de tu DM, puedes optar por usar tu modificador de <strong>Sabiduría</strong> para todas tus funciones de cazador de sangre que usan tu modificador de Inteligencia de forma predeterminada.
+        </p>
+
+        <h2>El Cazador de Sangre</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nivel</th>
+                    <th>Bono de competencia</th>
+                    <th>Troquel Hemocraft</th>
+                    <th>Maldiciones de sangre conocidas</th>
+                    <th>Funciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>+2</td>
+                    <td>1d4</td>
+                    <td>1</td>
+                    <td>Perdición del cazador, Maldición sangrienta</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>+2</td>
+                    <td>1d4</td>
+                    <td>1</td>
+                    <td>Estilo de lucha, Rito carmesí</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>+2</td>
+                    <td>1d4</td>
+                    <td>1</td>
+                    <td>Orden del Cazador de Sangre</td>
+                </tr>
+                <!-- Continúa la tabla para los niveles restantes -->
+            </tbody>
+        </table>
+
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados para la Vida:</strong> 1d10 por nivel de cazador de sangre</li>
+            <li><strong>Puntos de Vida en el 1er Nivel:</strong> 10 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Vida en Niveles Superiores:</strong> 1d10 (o 6) + tu modificador de Constitución por nivel de cazador de sangre después del 1er nivel</li>
+        </ul>
+<div class="seccion-detalle equipo">
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Armadura ligera, armadura mediana, escudos</li>
+            <li><strong>Armas:</strong> Armas simples, armas marciales</li>
+            <li><strong>Herramientas:</strong> Suministros de alquimista</li>
+            <li><strong>Tiradas de salvación:</strong> Destreza, Inteligencia</li>
+            <li>
+                <strong>Habilidades:</strong> Elige tres de:
+                <ul>
+                    <li>Acrobacias</li>
+                    <li>Arcanos</li>
+                    <li>Atletismo</li>
+                    <li>Historia</li>
+                    <li>Perspicacia</li>
+                    <li>Investigación</li>
+                    <li>Religión</li>
+                    <li>Supervivencia</li>
+                </ul>
+            </li>
+        </ul>
+</div>
+<div class="seccion-detalle equipo">
+        <h2>Equipo</h2>
+    <ul>
+        <li>(a) un arma marcial o (b) dos armas simples</li>
+        <li>(a) una ballesta ligera y 20 flechas o (b) una ballesta de mano y 20 flechas</li>
+        <li>(a) armadura de cuero con tachuelas o (b) armadura de malla de escamas</li>
+        <li>Un paquete de explorador y suministros de alquimista</li>
+    </ul>
+</div>
+    <h2>Perdición del Cazador</h2>
+    <p>
+        En el nivel 1, has sobrevivido a la Perdición del Cazador, un ritual peligroso y largamente guardado que altera la sangre de tu vida, 
+        atándote para siempre a la oscuridad y afinando tus sentidos contra ella. 
+        Tienes ventaja en las pruebas de <strong>Sabiduría (Supervivencia)</strong> para rastrear hadas, demonios o muertos vivientes, 
+        así como en las pruebas de <strong>Inteligencia</strong> para recordar información sobre tales criaturas.
+    </p>
+    <p>
+        La Perdición del Cazador también empodera a tu cuerpo para controlar y dar forma a la magia hemocraft, usando tu propia sangre 
+        y esencia vital para alimentar tus habilidades. Algunas de tus características requieren que tu objetivo haga una tirada de salvación 
+        para resistir los efectos de la característica. El CD de tiro de ahorro se calcula de la siguiente manera:
+    </p>
+    <p>
+        <strong>Guardado de Hemocraft CD</strong> = 8 + tu bonificación de competencia + tu modificador de Hemocraft 
+        (tu elección entre <strong>Inteligencia</strong> y <strong>Sabiduría</strong>)
+    </p>
+
+    <h2>Malédica de Sangre</h2>
+    <p>
+        También en el nivel 1, obtienes la capacidad de canalizar, o a veces sacrificar, una parte de tu esencia vital para maldecir 
+        y manipular criaturas a través de la magia de hemocraft. Conoces una maldición de sangre de tu elección. 
+        Aprendes una maldición de sangre adicional de tu elección en el <strong>6º</strong>, <strong>10º</strong>, <strong>14º</strong> y <strong>18º</strong> nivel. 
+        Cada vez que aprendas una nueva maldición de sangre, también puedes elegir una de las maldiciones de sangre que conoces 
+        y reemplazarla con otra maldición de sangre.
+    </p>
+    <p>
+        Cada vez que usas tu función <strong>Blood Maledict</strong>, eliges qué maldición invocar de las maldiciones que conoces. 
+        Mientras invocas una maldición de sangre, pero antes de que afecte al objetivo, puedes elegir amplificar la maldición recibiendo 
+        daño necrótico igual a una tirada de tu dado de hemocraft. Este daño no se puede reducir de ninguna manera. Una maldición amplificada 
+        obtiene un efecto adicional, que se indica en la descripción de la maldición. Las criaturas que no tienen sangre son inmunes a las maldiciones de sangre 
+        a menos que hayas amplificado la maldición.
+    </p>
+    <p>
+        Una vez que uses esta función, debes terminar un descanso corto o largo antes de poder volver a usarla. 
+        Puedes usar <strong>Blood Maledict</strong> dos veces entre descansos comenzando en el <strong>6º nivel</strong>, tres veces comenzando en el <strong>13º nivel</strong> 
+        y cuatro veces comenzando en el <strong>17º nivel</strong>.
+    </p>
+
+        <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+<h2>Características por Nivel</h2>
+<div id="botones-caracteristicas">
+    <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+    <button onclick="filtrarCaracteristicas('1')">Nivel 1</button>
+    <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+    <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+    <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+    <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+    <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+    <button onclick="filtrarCaracteristicas('7')">Nivel 7</button>
+    <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+    <button onclick="filtrarCaracteristicas('9')">Nivel 9</button>
+    <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+    <button onclick="filtrarCaracteristicas('11')">Nivel 11</button>
+    <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+    <button onclick="filtrarCaracteristicas('13')">Nivel 13</button>
+    <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+    <button onclick="filtrarCaracteristicas('15')">Nivel 15</button>
+    <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+    <button onclick="filtrarCaracteristicas('17')">Nivel 17</button>
+    <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+    <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+    <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+</div>
+
+<table id="tabla-caracteristicas">
+    <thead>
+        <tr>
+            <th>Nivel</th>
+            <th>Característica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Generado dinámicamente -->
+    </tbody>
+</table>
+
+<script>
+const caracteristicas = [
+{ nivel: 2, nombre: "Estilo de Lucha", descripcion: "Adoptas un estilo de lucha especializado: Tiro con arco (+2 a ataque a distancia), Duelo (+2 al daño con arma a una mano), Gran lucha con armas (vuelve a tirar 1s o 2s en daño de armas de dos manos), o Lucha con dos armas (añades modificador al segundo ataque)." },
+  { nivel: 2, nombre: "Rito Carmesí", descripcion: "Invocas un rito de hemocraft para infundir tu arma con energía elemental. Recibes daño necrótico al activarlo. Los ataques se vuelven mágicos y causan daño adicional según el rito elegido." },
+  { nivel: 2, nombre: "Ritos Carmesí", descripcion: "Elige un rito al obtener esta función. Rito de la Llama (fuego), Rito de los Frozen (hielo), Rito de la Tormenta (rayo). A nivel 14 puedes elegir Rito de los Muertos (necrótico), del Oráculo (psíquico) o del Rugido (trueno)." },
+  { nivel: 3, nombre: "Orden del Cazador de Sangre", descripcion: "Te unes a un orden: Asesino de Fantasmas, Licántropo, Mutante o Alma Profana, obteniendo habilidades adicionales en los niveles 3, 7, 11, 15 y 18." },
+  { nivel: 4, nombre: "Mejora de la Puntuación de Habilidad", descripcion: "Aumenta una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20. Puedes tomar una proeza en vez de la mejora." },
+  { nivel: 8, nombre: "Mejora de la Puntuación de Habilidad", descripcion: "Aumenta una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20. Puedes tomar una proeza en vez de la mejora." },
+  { nivel: 12, nombre: "Mejora de la Puntuación de Habilidad", descripcion: "Aumenta una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20. Puedes tomar una proeza en vez de la mejora." },
+  { nivel: 16, nombre: "Mejora de la Puntuación de Habilidad", descripcion: "Aumenta una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20. Puedes tomar una proeza en vez de la mejora." },
+  { nivel: 19, nombre: "Mejora de la Puntuación de Habilidad", descripcion: "Aumenta una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20. Puedes tomar una proeza en vez de la mejora." },
+  { nivel: 5, nombre: "Ataque Extra", descripcion: "Cuando realizas la acción de Ataque en tu turno, puedes atacar dos veces en lugar de una." }
+];
+
+function generarTabla(nivelFiltro = "todos") {
+    const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+    cuerpo.innerHTML = "";
+    caracteristicas.forEach(carac => {
+        if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${carac.nivel}</td>
+                <td>${carac.nombre}</td>
+                <td>${carac.descripcion}</td> 
+            `;
+            cuerpo.appendChild(fila);
+        }
+    });
+}
+
+function filtrarCaracteristicas(nivel) {
+    generarTabla(nivel);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    generarTabla();
+});
+</script>
+    </section>
+</body>
+</html>

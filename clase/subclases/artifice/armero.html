@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armero - Subclase de Artífice</title>
+    <link rel="stylesheet" href="../StyleSubclase.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Herramientas del Oficio</h2>
+        <p>Cuando adoptas esta especialización en el 3er nivel, obtienes competencia con armadura pesada. También obtienes destreza con las herramientas de herrero. Si ya tienes este dominio de la herramienta, obtienes dominio con otro tipo de herramientas artesanales de tu elección.</p>
+    </section>
+
+    <section>
+        <h2>Hechizos de Armero</h2>
+        <p>A partir del 3er nivel, siempre tienes ciertos hechizos preparados después de alcanzar niveles particulares en esta clase, como se muestra en la tabla de Hechizos de Armero. Estos hechizos cuentan como hechizos de artífice para ti, pero no cuentan para el número de hechizos de artífice que prepares.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nivel de Artífice</th>
+                    <th>Hechizos de Armero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3º</td>
+                    <td>Misil Mágico, Onda de Trueno</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>Imagen Especular, Shatter</td>
+                </tr>
+                <tr>
+                    <td>9º</td>
+                    <td>Patrón Hipnótico, Relámpago</td>
+                </tr>
+                <tr>
+                    <td>13º</td>
+                    <td>Escudo de Fuego, Mayor Invisibilidad</td>
+                </tr>
+                <tr>
+                    <td>17º</td>
+                    <td>Muro de Paso, Muro de la Fuerza</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Armadura Arcana</h2>
+        <p>A partir del nivel 3, tus búsquedas metalúrgicas te han llevado a hacer de la armadura un conducto para tu magia. Como acción, puedes convertir una armadura que llevas puesta en una armadura Arcana, siempre que tengas herramientas de herrero en la mano.</p>
+        <p>Obtienes los siguientes beneficios mientras usas esta armadura:</p>
+        <ul>
+            <li>Si la armadura normalmente tiene un requisito de Fuerza, la armadura arcana carece de este requisito para ti.</li>
+            <li>Puedes usar la armadura arcana como foco de lanzamiento de hechizos para tus hechizos de artífice.</li>
+            <li>La armadura se adhiere a ti y no se puede quitar contra tu voluntad. También se expande para cubrir todo el cuerpo, aunque puedes retraer o desplegar el casco como acción adicional. La armadura reemplaza cualquier extremidad faltante, funcionando de manera idéntica a una parte del cuerpo que está reemplazando.</li>
+            <li>Puedes quitarte o ponerte la armadura como acción.</li>
+            <li>La armadura sigue siendo Armadura Arcana hasta que te pones otra armadura o mueres.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Modelo de Armadura</h2>
+        <p>A partir del 3er nivel, puedes personalizar tu armadura Arcana. Cuando lo hagas, elige uno de los siguientes modelos de armadura: <strong>Guardián</strong> o <strong>Infiltrado</strong>. El modelo que elijas te da beneficios especiales mientras lo llevas puesto.</p>
+        <p>Cada modelo incluye un arma especial. Cuando atacas con esa arma, puedes añadir tu modificador de Inteligencia, en lugar de Fuerza o Destreza, a las tiradas de ataque y daño.</p>
+        <p>Puedes cambiar el modelo de la armadura cada vez que termines un descanso corto o largo, siempre que tengas herramientas de herrero en la mano.</p>
+
+        <h3>Guardián</h3>
+        <p>Diseñas tu armadura para estar en la primera línea del conflicto. Tiene las siguientes características:</p>
+        <ul>
+            <li><strong>Guanteletes de Trueno.</strong> Cada uno de los guanteletes de la armadura cuenta como una simple arma cuerpo a cuerpo mientras no tienes nada en él, e inflige 1d8 de daño de trueno en un golpe. Una criatura golpeada por el guantelete tiene desventaja en las tiradas de ataque contra objetivos que no sean tú hasta el comienzo de tu próximo turno, ya que la armadura emite mágicamente un pulso de distracción cuando la criatura ataca a otra persona.</li>
+            <li><strong>Campo Defensivo.</strong> Como acción adicional, puedes ganar puntos de golpe temporales iguales a tu nivel en esta clase, reemplazando los puntos de golpe temporales que ya tienes. Pierdes estos puntos de vida temporales si te quitas la armadura. Puedes usar esta acción de bonificación un número de veces igual a tu bonificación de competencia, y recuperas todos los usos gastados cuando terminas un descanso prolongado.</li>
+        </ul>
+
+        <h3>Infiltrado</h3>
+        <p>Personalizas tu armadura para empresas sutiles. Tiene las siguientes características:</p>
+        <ul>
+            <li><strong>Lanzador de Rayos.</strong> Un nodo con forma de gema aparece en uno de tus puños blindados o en el pecho (a tu elección). Cuenta como un arma a distancia simple, con un alcance normal de 90 pies y un alcance largo de 300 pies, e inflige 1d6 de daño de rayo en un impacto. Una vez en cada uno de tus turnos cuando golpeas a una criatura con ella, puedes hacer 1d6 puntos de daño de rayo extra a ese objetivo.</li>
+            <li><strong>Escalones Motorizados.</strong> Tu velocidad al caminar aumenta en 5 pies.</li>
+            <li><strong>Campo de Amortiguación.</strong> Tienes ventaja en las pruebas de Destreza (Sigilo). Si la armadura normalmente impone desventajas en tales controles, la ventaja y la desventaja se cancelan entre sí, como es normal.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ataque Extra</h2>
+        <p>A partir del 5º nivel, puedes atacar dos veces, en lugar de una, cada vez que realices la acción de Ataque en tu turno.</p>
+    </section>
+
+    <section>
+        <h2>Modificaciones de Armadura</h2>
+        <p>En el nivel 9, aprendes a usar tus infusiones de artífice para modificar especialmente tu armadura Arcana. Esa armadura ahora cuenta como objetos separados a los efectos de la función de infundir objetos: armadura (la pieza del pecho), botas, casco y el arma especial de la armadura. Cada uno de esos objetos puede llevar una de tus infusiones, y las infusiones se transfieren si cambias el modelo de tu armadura con la función Modelo de Armadura. Además, el número máximo de objetos que puedes infundir a la vez aumenta en 2, pero esos objetos adicionales deben formar parte de tu armadura Arcana.</p>
+    </section>
+
+    <section>
+        <h2>Armadura Perfeccionada</h2>
+        <p>En el nivel 15, tu armadura arcana obtiene beneficios adicionales en función de su modelo, como se muestra a continuación.</p>
+
+        <h3>Guardián</h3>
+        <p>Cuando una criatura enorme o más pequeña que puedes ver termina su turno a menos de 30 pies de ti, puedes usar tu reacción para forzarla mágicamente a hacer una tirada de salvación de Fuerza contra tu CD de salvación de hechizo. En una salvación fallida, tiras de la criatura hasta 25 pies directamente a un espacio desocupado. Si tiras del objetivo a un espacio a menos de 5 pies de ti, puedes hacer un ataque con arma cuerpo a cuerpo contra él como parte de esta reacción.</p>
+        <p>Puedes usar esta reacción un número de veces igual a tu bonificación de competencia, y recuperas todos los usos gastados de ella cuando terminas un largo descanso.</p>
+
+        <h3>Infiltrado</h3>
+        <p>Cualquier criatura que reciba daño de rayo de tu Lanzarayos brilla con luz mágica hasta el comienzo de tu próximo turno. La criatura resplandeciente arroja una luz tenue en un radio de 5 pies, y tiene desventaja en las tiradas de ataque contra ti, ya que la luz la sacude si te ataca. Además, la siguiente tirada de ataque contra él tiene ventaja, y si ese ataque impacta, el objetivo recibe 1d6 de daño de rayo extra.</p>
+    </section>
+
+</body>
+</html>

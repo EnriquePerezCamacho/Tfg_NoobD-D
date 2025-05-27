@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Luchadores</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header> 
+    <h1>Luchadores</h1>
+    <p>Los luchadores comparten un dominio incomparable con las armas y armaduras, y un conocimiento profundo de las habilidades de combate. Están muy familiarizados con la muerte, tanto la reparten como la miran desafiantes a la cara.</p>
+    <p>Debes tener una puntuación de Destreza o Fuerza de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+
+    <div class="section">
+        <h2>Tabla de Progresión del Luchador</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Bono de competencia</th>
+                <th>Funciones</th>
+            </tr>
+            <tr>
+                <td>1º</td>
+                <td>+2</td>
+                <td>Estilo de lucha, Segundo aliento</td>
+            </tr>
+            <tr>
+                <td>2º</td>
+                <td>+2</td>
+                <td>Oleada de acción (x1)</td>
+            </tr>
+            <tr>
+                <td>3º</td>
+                <td>+2</td>
+                <td>Arquetipo marcial</td>
+            </tr>
+            <tr>
+                <td>4º</td>
+                <td>+2</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>5º</td>
+                <td>+3</td>
+                <td>Ataque extra (x1)</td>
+            </tr>
+            <tr>
+                <td>6º</td>
+                <td>+3</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>7º</td>
+                <td>+3</td>
+                <td>Característica de arquetipo marcial</td>
+            </tr>
+            <tr>
+                <td>8º</td>
+                <td>+3</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>9º</td>
+                <td>+4</td>
+                <td>Indomable (x1)</td>
+            </tr>
+            <tr>
+                <td>10º</td>
+                <td>+4</td>
+                <td>Característica de arquetipo marcial</td>
+            </tr>
+            <tr>
+                <td>11º</td>
+                <td>+4</td>
+                <td>Ataque extra (x2)</td>
+            </tr>
+            <tr>
+                <td>12º</td>
+                <td>+4</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>13º</td>
+                <td>+5</td>
+                <td>Indomable (x2)</td>
+            </tr>
+            <tr>
+                <td>14º</td>
+                <td>+5</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>15º</td>
+                <td>+5</td>
+                <td>Característica de arquetipo marcial</td>
+            </tr>
+            <tr>
+                <td>16º</td>
+                <td>+5</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>17º</td>
+                <td>+6</td>
+                <td>Oleada de acción (x2), Indomable (x3)</td>
+            </tr>
+            <tr>
+                <td>18º</td>
+                <td>+6</td>
+                <td>Característica de arquetipo marcial</td>
+            </tr>
+            <tr>
+                <td>19º</td>
+                <td>+6</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+            </tr>
+            <tr>
+                <td>20º</td>
+                <td>+6</td>
+                <td>Ataque extra (x3)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d10 por nivel de luchador</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 10 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d10 (o 6) + tu modificador de Constitución por nivel de luchador después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Todas las armaduras, escudos</li>
+            <li><strong>Armas:</strong> Armas simples, armas marciales</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Fuerza, Constitución</li>
+            <li><strong>Habilidades:</strong> Elige dos de Acrobacia, Manejo de animales, Atletismo, Historia, Perspicacia, Intimidación, Percepción y Supervivencia</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu trasfondo:</p>
+        <ul>
+            <li>(a) cota de malla o (b) cuero, arco largo y 20 flechas</li>
+            <li>(a) un arma marcial y un escudo o (b) dos armas marciales</li>
+            <li>(a) una ballesta ligera y 20 flechas o (b) dos hachas de mano</li>
+            <li>(a) una manada de mazmorra, o (b) una manada de explorador</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Estilo de Lucha</h2>
+        <p>Adoptas un estilo de lucha particular como tu especialidad. Elige una de las siguientes opciones. No puedes elegir un estilo de lucha más de una vez, incluso si más adelante puedes elegir de nuevo.</p>
+        <ul>
+            <li><strong>Arquería (PHB):</strong> Obtienes un +2 a las tiradas de ataque que hagas con armas a distancia.</li>
+            <li><strong>Combate a Ciegas (TCE):</strong> Tienes visión ciega con un alcance de 10 pies. Dentro de ese alcance, puedes ver efectivamente cualquier cosa que no esté detrás de una cobertura total, incluso si estás cegado o en la oscuridad. Además, puedes ver una criatura invisible dentro de ese alcance, a menos que la criatura se oculte exitosamente de ti.</li>
+            <li><strong>Defensa (PHB):</strong> Mientras llevas armadura, obtienes un +1 a la CA.</li>
+            <li><strong>Duelo (PHB):</strong> Cuando empuñas un arma cuerpo a cuerpo con una mano y ninguna otra arma, obtienes un +2 a las tiradas de daño con esa arma.</li>
+            <li><strong>Combate con Armas a Dos Manos (PHB):</strong> Cuando sacas un 1 o un 2 en un dado de daño para un ataque que hagas con un arma cuerpo a cuerpo que empuñas con dos manos, puedes volver a tirar el dado y debes usar el nuevo resultado, incluso si es un 1 o un 2. El arma debe tener la propiedad de dos manos o versátil para que obtengas este beneficio.</li>
+            <li><strong>Intercepción (TCE):</strong> Cuando una criatura que puedes ver golpea a un objetivo, que no seas tú, dentro de 5 pies de ti con un ataque, puedes usar tu reacción para reducir el daño que el objetivo recibe en 1d10 + tu bonificación de competencia (mínimo 0 de daño). Debes empuñar un escudo o un arma simple o marcial para usar esta reacción.</li>
+            <li><strong>Protección (PHB):</strong> Cuando una criatura que puedes ver ataca a un objetivo que no seas tú y que esté dentro de 5 pies de ti, puedes usar tu reacción para imponer desventaja en la tirada de ataque. Debes empuñar un escudo.</li>
+            <li><strong>Técnica Superior (TCE):</strong> Aprendes una maniobra de tu elección entre las disponibles para el arquetipo de Maestro de Batalla. Si una maniobra que usas requiere que el objetivo haga una tirada de salvación para resistir los efectos de la maniobra, la CD de la tirada de salvación es igual a 8 + tu bonificación de competencia + tu modificador de Fuerza o Destreza (tu elección). Obtienes un dado de superioridad, que es un d6 (este dado se suma a cualquier dado de superioridad que tengas de otra fuente). Este dado se usa para alimentar tus maniobras. Un dado de superioridad se gasta cuando lo usas. Recuperas tus dados de superioridad gastados cuando terminas un descanso corto o largo.</li>
+            <li><strong>Combate con Armas Arrojadizas (TCE):</strong> Puedes sacar un arma que tenga la propiedad de arrojadiza como parte del ataque que hagas con el arma. Además, cuando aciertas con un ataque a distancia usando un arma arrojadiza, obtienes un +2 a la tirada de daño.</li>
+            <li><strong>Combate con Dos Armas (PHB):</strong> Cuando participas en el combate con dos armas, puedes agregar tu modificador de habilidad al daño del segundo ataque.</li>
+            <li><strong>Combate Desarmado (TCE):</strong> Tus golpes desarmados pueden infligir daño contundente igual a 1d6 + tu modificador de Fuerza al impactar. Si no empuñas ninguna arma o escudo cuando haces la tirada de ataque, el d6 se convierte en un d8. Al comienzo de cada uno de tus turnos, puedes infligir 1d4 de daño contundente a una criatura agarrada por ti.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Segundo Aliento</h2>
+        <p>Tienes una reserva limitada de resistencia que puedes usar para protegerte del daño. En tu turno, puedes usar una acción de bonificación para recuperar puntos de golpe iguales a 1d10 + tu nivel de luchador.</p>
+        <p>Una vez que usas esta característica, debes terminar un descanso corto o largo antes de poder usarla de nuevo.</p>
+    </div>
+
+    <div class="section">
+        <h2>Oleada de Acción</h2>
+        <p>A partir del nivel 2, puedes esforzarte más allá de tus límites normales por un momento. En tu turno, puedes realizar una acción adicional.</p>
+        <p>Una vez que usas esta característica, debes terminar un descanso corto o largo antes de poder usarla de nuevo. A partir del nivel 17, puedes usarla dos veces antes de un descanso, pero solo una vez en el mismo turno.</p>
+    </div>
+
+    <div class="section">
+        <h2>Arquetipo Marcial</h2>
+        <p>En el nivel 3, eliges un arquetipo que emulas en tus estilos y técnicas de combate. El arquetipo que elijas te otorga características en el nivel 3 y nuevamente en los niveles 7, 10, 15 y 18.</p>
+
+        <h3>Arquetipos</h3>
+        <ul>
+            <li><strong>Arquero Arcano:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Abanderado:</strong> Guía del Aventurero de la Costa de la Espada</li>
+            <li><strong>Maestro de Batalla:</strong> Manual del Jugador</li>
+            <li><strong>Caballero:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Campeón:</strong> Manual del Jugador</li>
+            <li><strong>Caballero del Eco:</strong> Guía del Explorador de Wildemount</li>
+            <li><strong>Caballero Hechicero:</strong> Manual del Jugador</li>
+            <li><strong>Guerrero Psíquico:</strong> El Caldero de Todo de Tasha</li>
+            <li><strong>Caballero Rúnico:</strong> El Caldero de Todo de Tasha</li>
+            <li><strong>Samurái:</strong> Guía de Xanathar para Todo</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Mejora de la Puntuación de Habilidad</h2>
+        <p>Cuando alcances el 4º nivel, y de nuevo en el 6º, 8º, 12º, 14º, 16º y 19º nivel, puedes aumentar una puntuación de habilidad de tu elección en 2, o puedes aumentar dos puntuaciones de habilidad de tu elección en 1. Como de costumbre, no puedes aumentar una puntuación de habilidad por encima de 20 usando esta función.</p>
+
+        <h3>Versatilidad Marcial (Opcional)</h3>
+        <p>Siempre que alcances un nivel en esta clase que otorgue la función de mejora de la puntuación de habilidad, puedes hacer una de las siguientes acciones, mientras cambias el enfoque de tu práctica marcial:</p>
+        <ul>
+            <li>Reemplazar un estilo de lucha que conozcas con otro estilo de lucha disponible para los luchadores.</li>
+            <li>Si conoces alguna maniobra del arquetipo de Maestro de Batalla, puedes reemplazar una maniobra que conozcas con una maniobra diferente.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Ataque Extra</h2>
+        <p>A partir del 5º nivel, puedes atacar dos veces, en lugar de una, siempre que realices la acción de Ataque en tu turno.</p>
+        <p>El número de ataques aumenta a tres cuando alcanzas el nivel 11 en esta clase y a cuatro cuando alcanzas el nivel 20 en esta clase.</p>
+    </div>
+
+    <div class="section">
+        <h2>Indomable</h2>
+        <p>A partir del 9º nivel, puedes volver a tirar una tirada de salvación que falles. Si lo haces, debes usar el nuevo resultado y no podrás volver a usar esta función hasta que termines un descanso largo.</p>
+        <p>Puedes usar esta función dos veces entre descansos largos a partir del nivel 13 y tres veces entre descansos largos a partir del nivel 17.</p>
+    </div>
+
+</body>
+</html>

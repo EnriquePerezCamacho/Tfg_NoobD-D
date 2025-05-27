@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechizos de Bardo</title>
+    <link rel="stylesheet" href="StyleHechizos.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><button onclick="location.href='../index.html'">Inicio</button></li>
+                <li><button onclick="location.href='../clases.html'">Clases</button></li>
+                <li><button onclick="location.href='../razas.html'">Razas</button></li>
+                <li><button onclick="location.href='../../subclases.html'">SubClases</button></li>
+                <li><button onclick="location.href='../Fichas/fichaautocomple.html'">Fichas</button></li>
+                <li><button>Help</button></li>
+                <li><button id="profileButton">Perfil</button></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
+</header>
+    <h1>Hechizos de Bardo</h1>
+
+    <!-- Botones para seleccionar el nivel -->
+    <div id="botones-niveles">
+        <button onclick="actualizarTabla('Cantrip')">Cantrip</button>
+        <button onclick="actualizarTabla('1Lvl')">Nivel 1</button>
+        <button onclick="actualizarTabla('2Lvl')">Nivel 2</button>
+        <button onclick="actualizarTabla('3Lvl')">Nivel 3</button>
+        <button onclick="actualizarTabla('4Lvl')">Nivel 4</button>
+        <button onclick="actualizarTabla('5Lvl')">Nivel 5</button>
+        <button onclick="actualizarTabla('6Lvl')">Nivel 6</button>
+        <button onclick="actualizarTabla('7Lvl')">Nivel 7</button>
+        <button onclick="actualizarTabla('8Lvl')">Nivel 8</button>
+        <button onclick="actualizarTabla('9Lvl')">Nivel 9</button>
+    </div>
+
+    <h2>Hechizos</h2>
+    <table id="tabla-hechizos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Escuela</th>
+                <th>Tiempo de Casting</th>
+                <th>Gama</th>
+                <th>Duración</th>
+                <th>Componentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON con los hechizos del Bardo
+        const hechizos = {
+  "1st Level": [
+    {
+      "nombre": "Absorber elementos",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Reacción",
+      "gama": "Propio",
+      "duracion": "1 ronda",
+      "componentes": "S"
+    },
+    {
+      "nombre": "Alarma",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 minuto R",
+      "gama": "30 pies",
+      "duracion": "8 Horas",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Amistad animal",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "24 horas",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Vínculo de la bestia",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Curar heridas",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Detectar magia",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Detectar venenos y enfermedades",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Golpe atrapante",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Enredar",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Nube de niebla",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Goodberry",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Granizo de espinas",
+      "escuela": "Conjuro",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Marca del cazador",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Saltar",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Caminante Largo",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Castigo abrasador",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Trampa",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 minuto",
+      "gama": "Toque",
+      "duracion": "Hasta que se disipe o se active",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Hablar con los animales",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "Propio",
+      "duracion": "10 minutos",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Despertar Súbito (UA)",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "10 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Astucia salvaje (UA)",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción R",
+      "gama": "120 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Golpe de céfiro",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V"
+    }
+  ],
+"2": [
+    {
+      "nombre": "Aumentar bestia",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Piel de corteza",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Llamar relámpagos",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Oscuridad",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, M"
+    },
+    {
+      "nombre": "Encontrar montura",
+      "escuela": "Conjuración (ritual)",
+      "tiempo_casting": "10 minutos",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Localizar objeto",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Cuerda encantada",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Paso brumoso",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 Acción de bonificación",
+      "gama": "Propio",
+      "duracion": "Instantáneo",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Rayo lunar",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Silencio",
+      "escuela": "Ilusión (ritual)",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Bestia invocada",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    }
+  ],
+ "3": [
+    {
+      "nombre": "Aura de vitalidad",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Propio (aura de 30 pies)",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Invocar espíritus de la naturaleza",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Hablar con plantas",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "10 minutos",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Andar por el viento",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 minuto",
+      "gama": "30 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Remover maldición",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Forma gaseosa",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Disipar magia",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Convocar animal feérico",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Crecimiento vegetal",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción o 8 horas",
+      "gama": "150 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Clarividencia",
+      "escuela": "Adivinación",
+      "tiempo_casting": "10 minutos",
+      "gama": "1 milla",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Relámpago",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "100 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    }
+  ],
+"4": [
+    {
+      "nombre": "Caminar por el hielo",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Conjurar elemental",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 minuto",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Confusión",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Dominar bestia",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 Acción",
+      "gama": "60 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Libertad de movimiento",
+      "escuela": "Abjuración",
+      "tiempo_casting": "1 Acción",
+      "gama": "Toque",
+      "duracion": "1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Localizar criatura",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 Acción",
+      "gama": "Personal",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Muro de fuego",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Tempestad de hielo",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 Acción",
+      "gama": "300 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Marchitar",
+      "escuela": "Nigromancia",
+      "tiempo_casting": "1 Acción",
+      "gama": "30 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    }
+  ],
+"5": [
+    {
+      "nombre": "Columna de llamas",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 acción",
+      "gama": "60 pies",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Comunión",
+      "escuela": "Adivinación",
+      "tiempo_casting": "1 minuto",
+      "gama": "Personal",
+      "duracion": "1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Conjurar criatura feérica",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 acción",
+      "gama": "90 pies",
+      "duracion": "Concentración, hasta 1 hora",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Cono de frío",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 acción",
+      "gama": "Personal (cono de 60 pies)",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Contagio",
+      "escuela": "Nigromancia",
+      "tiempo_casting": "1 acción",
+      "gama": "Toque",
+      "duracion": "7 días",
+      "componentes": "V, S"
+    },
+    {
+      "nombre": "Geas",
+      "escuela": "Encantamiento",
+      "tiempo_casting": "1 minuto",
+      "gama": "60 pies",
+      "duracion": "30 días",
+      "componentes": "V"
+    },
+    {
+      "nombre": "Levantar a los muertos",
+      "escuela": "Nigromancia",
+      "tiempo_casting": "1 hora",
+      "gama": "Toque",
+      "duracion": "Instantáneo",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Muro de piedra",
+      "escuela": "Evocación",
+      "tiempo_casting": "1 acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 10 minutos",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Nube aniquiladora",
+      "escuela": "Conjuración",
+      "tiempo_casting": "1 acción",
+      "gama": "120 pies",
+      "duracion": "Concentración, hasta 1 minuto",
+      "componentes": "V, S, M"
+    },
+    {
+      "nombre": "Pasar a través de la piedra",
+      "escuela": "Transmutación",
+      "tiempo_casting": "1 acción",
+      "gama": "Personal",
+      "duracion": "1 minuto",
+      "componentes": "V, S"
+    }
+]       
+        };
+
+        // Función para actualizar la tabla según el nivel seleccionado
+        function actualizarTabla(nivel) {
+            const tablaHechizos = document.getElementById('tabla-hechizos').getElementsByTagName('tbody')[0];
+            tablaHechizos.innerHTML = ""; // Limpiar la tabla antes de agregar las filas
+
+            hechizos[nivel].forEach(hechizo => {
+                const row = tablaHechizos.insertRow();
+                row.innerHTML = `
+                    <td><a href="${hechizo.enlace}">${hechizo.nombre}</a></td>
+                    <td>${hechizo.escuela}</td>
+                    <td>${hechizo.tiempo_casting}</td>
+                    <td>${hechizo.gama}</td>
+                    <td>${hechizo.duracion}</td>
+                    <td>${hechizo.componentes}</td>
+                `;
+            });
+        }
+
+        // Inicializar la tabla con los hechizos de Cantrip
+        actualizarTabla("Cantrip");
+    </script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechizos de Bardo</title>
+    <link rel="stylesheet" href="StyleHechizos.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><button onclick="location.href='../index.html'">Inicio</button></li>
+                <li><button onclick="location.href='../clases.html'">Clases</button></li>
+                <li><button onclick="location.href='../razas.html'">Razas</button></li>
+                <li><button onclick="location.href='../../subclases.html'">SubClases</button></li>
+                <li><button onclick="location.href='../Fichas/fichaautocomple.html'">Fichas</button></li>
+                <li><button>Help</button></li>
+                <li><button id="profileButton">Perfil</button></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
+</header>
+    <h1>Hechizos de Bardo</h1>
+
+    <!-- Botones para seleccionar el nivel -->
+    <div id="botones-niveles">
+        <button onclick="actualizarTabla('Cantrip')">Cantrip</button>
+        <button onclick="actualizarTabla('1Lvl')">Nivel 1</button>
+        <button onclick="actualizarTabla('2Lvl')">Nivel 2</button>
+        <button onclick="actualizarTabla('3Lvl')">Nivel 3</button>
+        <button onclick="actualizarTabla('4Lvl')">Nivel 4</button>
+        <button onclick="actualizarTabla('5Lvl')">Nivel 5</button>
+        <button onclick="actualizarTabla('6Lvl')">Nivel 6</button>
+        <button onclick="actualizarTabla('7Lvl')">Nivel 7</button>
+        <button onclick="actualizarTabla('8Lvl')">Nivel 8</button>
+        <button onclick="actualizarTabla('9Lvl')">Nivel 9</button>
+    </div>
+
+    <h2>Hechizos</h2>
+    <table id="tabla-hechizos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Escuela</th>
+                <th>Tiempo de Casting</th>
+                <th>Gama</th>
+                <th>Duración</th>
+                <th>Componentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON con los hechizos del Bardo
+        const hechizos = {
+  "1st Level": [
+    {
+      "nombre": "Bless",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Action",
+      "gama": "30 feet",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_bless.html"
+    },
+    {
+      "nombre": "Ceremony",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action R",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_ceremony.html"
+    },
+    {
+      "nombre": "Command",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Action",
+      "gama": "60 feet",
+      "duracion": "1 round",
+      "componentes": "V",
+      "enlace": "hechizo_command.html"
+    },
+    {
+      "nombre": "Compelled Duel",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "30 feet",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_compelled_duel.html"
+    },
+    {
+      "nombre": "Cure Wounds",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_cure_wounds.html"
+    },
+    {
+      "nombre": "Detect Evil and Good",
+      "escuela": "Divination",
+      "tiempo_casting": "1 Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S",
+      "enlace": "hechizo_detect_evil_and_good.html"
+    },
+    {
+      "nombre": "Detect Magic",
+      "escuela": "Divination",
+      "tiempo_casting": "1 Action R",
+      "gama": "Self",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S",
+      "enlace": "hechizo_detect_magic.html"
+    },
+    {
+      "nombre": "Detect Poison and Disease",
+      "escuela": "Divination",
+      "tiempo_casting": "1 Action R",
+      "gama": "Self",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_detect_poison_and_disease.html"
+    },
+    {
+      "nombre": "Divine Favor",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V, S",
+      "enlace": "hechizo_divine_favor.html"
+    },
+    {
+      "nombre": "Heroism",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V, S",
+      "enlace": "hechizo_heroism.html"
+    },
+    {
+      "nombre": "Protection from Evil and Good",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_protection_from_evil_and_good.html"
+    },
+    {
+      "nombre": "Purify Food and Drink",
+      "escuela": "Transmutation",
+      "tiempo_casting": "1 Action R",
+      "gama": "10 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_purify_food_and_drink.html"
+    },
+    {
+      "nombre": "Searing Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_searing_smite.html"
+    },
+    {
+      "nombre": "Shield of Faith",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "60 feet",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_shield_of_faith.html"
+    },
+    {
+      "nombre": "Thunderous Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_thunderous_smite.html"
+    },
+    {
+      "nombre": "Wrathful Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_wrathful_smite.html"
+    }
+  ],
+  "2nd Level": [
+    {
+      "nombre": "Aid",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "30 Feet",
+      "duracion": "8 hours",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_aid.html"
+    },
+    {
+      "nombre": "Branding Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_branding_smite.html"
+    },
+    {
+      "nombre": "Find Steed",
+      "escuela": "Conjuration",
+      "tiempo_casting": "10 Minutes",
+      "gama": "30 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_find_steed.html"
+    },
+    {
+      "nombre": "Find Vehicle (UA)",
+      "escuela": "Conjuration T",
+      "tiempo_casting": "10 Minutes",
+      "gama": "30 feet",
+      "duracion": "8 hours",
+      "componentes": "V, S",
+      "enlace": "hechizo_find_vehicle.html"
+    },
+    {
+      "nombre": "Gentle Repose",
+      "escuela": "Necromancy",
+      "tiempo_casting": "1 Action R",
+      "gama": "Touch",
+      "duracion": "10 days",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_gentle_repose.html"
+    },
+    {
+      "nombre": "Lesser Restoration",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_lesser_restoration.html"
+    },
+    {
+      "nombre": "Locate Object",
+      "escuela": "Divination",
+      "tiempo_casting": "1 Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_locate_object.html"
+    },
+    {
+      "nombre": "Magic Weapon",
+      "escuela": "Transmutation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Touch",
+      "duracion": "Concentration, up to 1 hour",
+      "componentes": "V, S",
+      "enlace": "hechizo_magic_weapon.html"
+    },
+    {
+      "nombre": "Prayer of Healing",
+      "escuela": "Evocation",
+      "tiempo_casting": "10 Minutes",
+      "gama": "30 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V",
+      "enlace": "hechizo_prayer_of_healing.html"
+    },
+    {
+      "nombre": "Protection from Poison",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "1 hour",
+      "componentes": "V, S",
+      "enlace": "hechizo_protection_from_poison.html"
+    },
+    {
+      "nombre": "Warding Bond",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "1 hour",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_warding_bond.html"
+    },
+    {
+      "nombre": "Zone of Truth",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Action",
+      "gama": "60 feet",
+      "duracion": "10 minutes",
+      "componentes": "V, S",
+      "enlace": "hechizo_zone_of_truth.html"
+    }
+  ],
+  "3rd Level": [
+    {
+      "nombre": "Aura of Vitality",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action",
+      "gama": "Self (30-foot radius)",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_aura_of_vitality.html"
+    },
+    {
+      "nombre": "Blinding Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_blinding_smite.html"
+    },
+    {
+      "nombre": "Create Food and Water",
+      "escuela": "Conjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "30 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_create_food_and_water.html"
+    },
+    {
+      "nombre": "Crusader's Mantle",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_crusaders_mantle.html"
+    },
+    {
+      "nombre": "Daylight",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action",
+      "gama": "60 feet",
+      "duracion": "1 hour",
+      "componentes": "V, S",
+      "enlace": "hechizo_daylight.html"
+    },
+    {
+      "nombre": "Dispel Magic",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "120 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_dispel_magic.html"
+    },
+    {
+      "nombre": "Elemental Weapon",
+      "escuela": "Transmutation",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Concentration, up to 1 hour",
+      "componentes": "V, S",
+      "enlace": "hechizo_elemental_weapon.html"
+    },
+    {
+      "nombre": "Magic Circle",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Minute",
+      "gama": "10 feet",
+      "duracion": "1 hour",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_magic_circle.html"
+    },
+    {
+      "nombre": "Remove Curse",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_remove_curse.html"
+    },
+    {
+      "nombre": "Revivify",
+      "escuela": "Necromancy",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_revivify.html"
+    },
+    {
+      "nombre": "Spirit Shroud",
+      "escuela": "Necromancy",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V, S",
+      "enlace": "hechizo_spirit_shroud.html"
+    }
+  ],
+  "4th Level": [
+    {
+      "nombre": "Aura of Life",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Self (30-foot radius)",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V",
+      "enlace": "hechizo_aura_of_life.html"
+    },
+    {
+      "nombre": "Aura of Purity",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Self (30-foot radius)",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V",
+      "enlace": "hechizo_aura_of_purity.html"
+    },
+    {
+      "nombre": "Banishment",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "60 feet",
+      "duracion": "Concentration, up to 1 minutes",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_banishment.html"
+    },
+    {
+      "nombre": "Death Ward",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "8 hours",
+      "componentes": "V, S",
+      "enlace": "hechizo_death_ward.html"
+    },
+    {
+      "nombre": "Find Greater Steed",
+      "escuela": "Conjuration",
+      "tiempo_casting": "10 Minutes",
+      "gama": "30 feet",
+      "duracion": "Instantaneous",
+      "componentes": "V, S",
+      "enlace": "hechizo_find_greater_steed.html"
+    },
+    {
+      "nombre": "Locate Creature",
+      "escuela": "Divination",
+      "tiempo_casting": "1 Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 hour",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_locate_creature.html"
+    },
+    {
+      "nombre": "Staggering Smite",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_staggering_smite.html"
+    }
+  ],
+  "5th Level": [
+    {
+      "nombre": "Banishing Smite",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V",
+      "enlace": "hechizo_banishing_smite.html"
+    },
+    {
+      "nombre": "Circle of Power",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Self (30-foot radius)",
+      "duracion": "Concentration, up to 10 minutes",
+      "componentes": "V",
+      "enlace": "hechizo_circle_of_power.html"
+    },
+    {
+      "nombre": "Destructive Wave",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Action",
+      "gama": "Self (30-foot radius)",
+      "duracion": "Instantaneous",
+      "componentes": "V",
+      "enlace": "hechizo_destructive_wave.html"
+    },
+    {
+      "nombre": "Dispel Evil and Good",
+      "escuela": "Abjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "Self",
+      "duracion": "Concentration, up to 1 minute",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_dispel_evil_and_good.html"
+    },
+    {
+      "nombre": "Geas",
+      "escuela": "Enchantment",
+      "tiempo_casting": "1 Minute",
+      "gama": "60 feet",
+      "duracion": "30 days",
+      "componentes": "V",
+      "enlace": "hechizo_geas.html"
+    },
+    {
+      "nombre": "Holy Weapon",
+      "escuela": "Evocation",
+      "tiempo_casting": "1 Bonus Action",
+      "gama": "Touch",
+      "duracion": "Concentration, up to 1 hour",
+      "componentes": "V, S",
+      "enlace": "hechizo_holy_weapon.html"
+    },
+    {
+      "nombre": "Raise Dead",
+      "escuela": "Necromancy",
+      "tiempo_casting": "1 Action",
+      "gama": "Touch",
+      "duracion": "Instantaneous",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_raise_dead.html"
+    },
+    {
+      "nombre": "Summon Celestial",
+      "escuela": "Conjuration",
+      "tiempo_casting": "1 Action",
+      "gama": "90 feet",
+      "duracion": "Concentration, up to 1 hour",
+      "componentes": "V, S, M",
+      "enlace": "hechizo_summon_celestial.html"
+    }
+  ]        
+        };
+
+        // Función para actualizar la tabla según el nivel seleccionado
+        function actualizarTabla(nivel) {
+            const tablaHechizos = document.getElementById('tabla-hechizos').getElementsByTagName('tbody')[0];
+            tablaHechizos.innerHTML = ""; // Limpiar la tabla antes de agregar las filas
+
+            hechizos[nivel].forEach(hechizo => {
+                const row = tablaHechizos.insertRow();
+                row.innerHTML = `
+                    <td><a href="${hechizo.enlace}">${hechizo.nombre}</a></td>
+                    <td>${hechizo.escuela}</td>
+                    <td>${hechizo.tiempo_casting}</td>
+                    <td>${hechizo.gama}</td>
+                    <td>${hechizo.duracion}</td>
+                    <td>${hechizo.componentes}</td>
+                `;
+            });
+        }
+
+        // Inicializar la tabla con los hechizos de Cantrip
+        actualizarTabla("Cantrip");
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechizos</title>
+    <style>
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004085;
+    transform: scale(1);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Contenedor de los botones */
+#botones-niveles {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Hechizos de Magia</h1>
+
+    <!-- Botones para seleccionar el nivel -->
+    <div id="botones-niveles">
+        <button onclick="actualizarTabla('Cantrip')">Cantrip</button>
+        <button onclick="actualizarTabla('1Lvl')">Nivel 1</button>
+        <button onclick="actualizarTabla('2Lvl')">Nivel 2</button>
+        <button onclick="actualizarTabla('3Lvl')">Nivel 3</button>
+        <button onclick="actualizarTabla('4Lvl')">Nivel 4</button>
+        <button onclick="actualizarTabla('5Lvl')">Nivel 5</button>
+    </div>
+
+    <h2>Hechizos</h2>
+    <table id="tabla-hechizos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Escuela</th>
+                <th>Tiempo de Casting</th>
+                <th>Gama</th>
+                <th>Duración</th>
+                <th>Componentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON con los hechizos
+        const hechizos = {
+            "Cantrip": [
+    {
+        "nombre": "Salpicaduras de ácido",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_salpicaduras_acido.html"
+    },
+    {
+        "nombre": "Hoja retumbante",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "1 ronda",
+        "componentes": "S, M",
+        "enlace": "hechizo_hoja_retumbante.html"
+    },
+    {
+        "nombre": "Estruendo de trueno",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "Instantáneo",
+        "componentes": "S",
+        "enlace": "hechizo_estruendo_trueno.html"
+    }
+            ],
+            "1Lvl": [
+    {
+        "nombre": "Brebaje cáustico de Tasha",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Personal (línea de 30 pies)",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_brebaje_caustico.html"
+    }
+            ],
+
+            "2Lvl": [
+    {
+        "nombre": "Telaraña",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_telaraña.html"
+    }
+
+            ],
+            "3Lvl": [
+    {
+        "nombre": "Caminar sobre el agua",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_caminar_agua.html"
+    }
+            ],
+            "4Lvl": [
+    {
+        "nombre": "Invocar Constructo",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "90 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_invocar_constructo.html"
+    }
+            ],
+            "5Lvl": [
+            {
+        "nombre": "Puño de hierro",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_puño_iron.html"
+    },
+    {
+        "nombre": "Transmutar roca",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_transmutar_roca.html"
+    },
+    {
+        "nombre": "Muro de piedra",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_muro_piedra.html"
+    }
+            ]
+        };
+
+        // Función para actualizar la tabla según el nivel seleccionado
+        function actualizarTabla(nivel) {
+            const tablaHechizos = document.getElementById('tabla-hechizos').getElementsByTagName('tbody')[0];
+            tablaHechizos.innerHTML = ""; // Limpiar la tabla antes de agregar las filas
+
+            hechizos[nivel].forEach(hechizo => {
+                const row = tablaHechizos.insertRow();
+                row.innerHTML = `
+                    <td><a href="${hechizo.enlace}">${hechizo.nombre}</a></td>
+                    <td>${hechizo.escuela}</td>
+                    <td>${hechizo.tiempo_casting}</td>
+                    <td>${hechizo.gama}</td>
+                    <td>${hechizo.duracion}</td>
+                    <td>${hechizo.componentes}</td>
+                `;
+            });
+        }
+
+        // Inicializar la tabla con los hechizos de Cantrip
+        actualizarTabla("Cantrip");
+    </script>
+</body>
+</html>

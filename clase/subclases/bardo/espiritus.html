@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bárbaro del Camino de la Bestia</title>
+    <link rel="stylesheet" href="../StyleSubclase.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+            <ul>
+                <li><button onclick="location.href='../../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br><br>
+
+    </header>
+<div class="container">
+    <h1>Colegio de los Espíritus</h1>
+    <p>Los bardos del Colegio de los Espíritus buscan cuentos con poder inherente, ya sean leyendas, historias o ficciones, y dan vida a sus sujetos. Usando adornos ocultos, estos bardos conjuran encarnaciones espirituales de fuerzas poderosas para cambiar el mundo una vez más. Sin embargo, estos espíritus son caprichosos, y lo que invoca un bardo no siempre está completamente bajo su control.</p>
+    <p class="source">Fuente: Guía de Van Richten para Ravenloft</p>
+
+    <h2>Susurros guía</h2>
+    <p>En el 3er nivel, puedes acercarte a los espíritus para que te guíen a ti y a los demás. Aprendes el cantrip de <em>Guía</em>, que no cuenta para el número de cantrips de bardo que conoces. Para ti, tiene un alcance de 60 pies cuando lo lanzas.</p>
+
+    <h2>Enfoque Espiritual</h2>
+    <p>En el 3er nivel, empleas herramientas que te ayudan a canalizar espíritus, ya sean figuras históricas o arquetipos ficticios. Puedes usar los siguientes objetos como foco de lanzamiento de hechizos para tus hechizos de bardo: una vela, una bola de cristal, una calavera, un tablero espiritual o un mazo de tarokka.</p>
+    <p>A partir del nivel 6, cuando lanzas un hechizo de bardo que inflige daño o restaura puntos de golpe a través del Enfoque Espiritual, tira un d6 y obtienes una bonificación a una tirada de daño o curación del hechizo igual al número tirado.</p>
+
+    <h2>Cuentos del más allá</h2>
+    <p>En el 3er nivel, te acercas a los espíritus que cuentan sus historias a través de ti. Mientras mantienes tu Enfoque Espiritual, puedes usar una acción de bonificación para gastar un uso de tu Inspiración Bárdica y tirar sobre la tabla de Cuentos Espirituales usando tu dado de Inspiración Bárdica para determinar la historia que los espíritus te indican que cuentes. Conservas el cuento en tu mente hasta que le otorgas el efecto o terminas un descanso corto o largo.</p>
+    <p>Puedes usar una acción para elegir una criatura que puedas ver a menos de 30 pies de ti (puedes ser tú) para que sea el objetivo del efecto de la historia. Una vez que lo hagas, no podrás volver a otorgar el efecto de la historia hasta que la vuelvas a tirar.</p>
+    <p>Solo puedes retener uno de estos cuentos en mente a la vez, y rodar sobre la tabla de Cuentos espirituales termina inmediatamente el efecto del cuento anterior.</p>
+    <p>Si el cuento requiere una tirada de salvación, la CD es igual a tu CD de salvación de hechizos.</p>
+
+    <h3>Cuentos de espíritus</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dado de Inspiración Bárdica</th>
+                <th>Historia contada a través de ti</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>Cuento del animal astuto.</strong> Durante los siguientes 10 minutos, cada vez que el objetivo haga una prueba de Inteligencia, Sabiduría o Carisma, el objetivo puede tirar un dado extra inmediatamente después de tirar el d20 y añadir el número del dado extra a la prueba. El dado extra es del mismo tipo que el dado de inspiración bárdica.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>Cuento del Duelista Renombrado.</strong> Realizas un ataque de hechizo cuerpo a cuerpo contra el objetivo. En un golpe, el objetivo recibe daño de fuerza equivalente a dos tiradas de tu dado de Inspiración Bárdica + tu modificador de Carisma.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Cuento de los amigos queridos.</strong> El objetivo y otra criatura de su elección que pueda ver a menos de 5 pies de él ganan puntos de golpe temporales iguales a una tirada de tu dado de Inspiración Bárdica + tu modificador de Carisma.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>Cuento del fugitivo.</strong> El objetivo puede usar inmediatamente su reacción para teletransportarse hasta 30 pies a un espacio desocupado que puede ver. Cuando el objetivo se teletransporta, puede elegir un número de criaturas que puede ver a menos de 30 pies de él hasta tu modificador de Carisma (mínimo de 0) para usar inmediatamente la misma reacción.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>Cuento del Vengador.</strong> Durante 1 minuto, cualquier criatura que golpee al objetivo con un ataque cuerpo a cuerpo recibe daño de fuerza igual a una tirada de tu dado de Inspiración Bárdica.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>Cuento del viajero.</strong> El objetivo gana puntos de golpe temporales equivalentes a una tirada de tu dado de Inspiración Bárdica + tu nivel de bardo. Mientras tiene estos puntos de golpe temporales, la velocidad al caminar del objetivo aumenta en 10 pies y obtiene una bonificación de +1 a su CA.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>Cuento del Embrujador.</strong> El objetivo debe tener éxito en una tirada de salvación de Sabiduría o recibir daño psíquico igual a dos tiradas de tu dado de Inspiración Bárdica, y el objetivo queda incapacitado hasta el final de su próximo turno.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>Cuento del Fantasma.</strong> El objetivo se vuelve invisible hasta el final de su próximo turno o hasta que golpea a una criatura con un ataque. Si golpea a una criatura con un ataque durante esta invisibilidad, la criatura que golpea recibe daño necrótico igual a una tirada de tu dado de Inspiración Bárdica y queda asustada del objetivo hasta el final del próximo turno de la criatura asustada.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>Cuento del Bruto.</strong> Cada criatura de elección del objetivo que pueda ver a menos de 30 pies de él debe hacer una tirada de salvación de Fuerza. En una salvación fallida, una criatura recibe daño de trueno igual a tres tiradas de tu dado de Inspiración Bárdica y es derribada. Una criatura que tenga éxito en su tirada de salvación recibe la mitad del daño y no es derribada.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>Cuento del Dragón.</strong> El objetivo escupe fuego de su boca en un cono de 30 pies. Cada criatura en esa área debe hacer una tirada de salvación de Destreza, recibiendo daño de fuego igual a cuatro tiradas de tu dado de Inspiración Bárdica en una salvación fallida, o la mitad del daño en una salvación exitosa.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>Cuento del Ángel.</strong> El objetivo recupera puntos de golpe iguales a dos tiradas de tu dado de Inspiración Bárdica + tu modificador de Carisma, y terminas una condición de la siguiente lista que afecte al objetivo: cegado, ensordecido, paralizado, petrificado o envenenado.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>Cuento del Alterador de Mentes.</strong> El objetivo debe tener éxito en una tirada de salvación de Inteligencia o recibir daño psíquico igual a tres tiradas de tu dado de Inspiración Bárdica y quedar aturdido hasta el final de su próximo turno.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Sesión Espiritual</h2>
+    <p>En el nivel 6, los espíritus te proporcionan conocimientos sobrenaturales. Puedes realizar un ritual de una hora de duración canalizando espíritus (que se puede hacer durante un descanso corto o largo) usando tu Enfoque Espiritual. Puedes realizar el ritual con un número de criaturas dispuestas igual a tu bonificación de competencia (incluyéndote a ti). Al final del ritual, aprendes temporalmente un hechizo de tu elección de cualquier clase.</p>
+    <p>El hechizo que elijas debe ser de un nivel igual al número de criaturas que realizaron el ritual o menos, el hechizo debe ser de un nivel que puedas lanzar, y debe ser de la escuela de Adivinación o Nigromancia. El hechizo elegido cuenta como un hechizo de bardo para ti, pero no cuenta para el número de hechizos de bardo que conoces.</p>
+    <p>Una vez que realizas el ritual, no puedes volver a hacerlo hasta que comiences un descanso largo, y conoces el hechizo elegido hasta que comiences un descanso largo.</p>
+
+    <h2>Conexión Mística</h2>
+    <p>En el nivel 14, ahora tienes la capacidad de influir en los espíritus de los Cuentos del Más Allá hacia ciertos cuentos. Cada vez que tires en la tabla de Cuentos Espirituales, puedes tirar el dado dos veces y elegir cuál de los dos efectos otorgar. Si sacas el mismo número en ambos dados, puedes ignorar el número y elegir cualquier efecto en la tabla.</p>
+</div>

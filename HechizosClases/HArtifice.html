@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechizos</title>
+    <link rel="stylesheet" href="StyleHechizos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><button onclick="location.href='../index.html'">Inicio</button></li>
+                    <li><button onclick="location.href='../clases.html'">Clases</button></li>
+                    <li><button onclick="location.href='../razas.html'">Razas</button></li>
+                    <li><button onclick="location.href='../../subclases.html'">SubClases</button></li>
+                    <li><button onclick="location.href='../Fichas/fichaautocomple.html'">Fichas</button></li>
+                    <li><button>Help</button></li>
+                    <li><button id="profileButton">Perfil</button></li>
+                </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br><br>
+    </header>
+    <h1>Hechizos de Magia</h1>
+
+    <!-- Botones para seleccionar el nivel -->
+    <div id="botones-niveles">
+        <button onclick="actualizarTabla('Cantrip')">Cantrip</button>
+        <button onclick="actualizarTabla('1Lvl')">Nivel 1</button>
+        <button onclick="actualizarTabla('2Lvl')">Nivel 2</button>
+        <button onclick="actualizarTabla('3Lvl')">Nivel 3</button>
+        <button onclick="actualizarTabla('4Lvl')">Nivel 4</button>
+        <button onclick="actualizarTabla('5Lvl')">Nivel 5</button>
+    </div>
+
+    <h2>Hechizos</h2>
+    <table id="tabla-hechizos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Escuela</th>
+                <th>Tiempo de Casting</th>
+                <th>Gama</th>
+                <th>Duración</th>
+                <th>Componentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON con los hechizos
+        const hechizos = {
+            "Cantrip": [
+    {
+        "nombre": "Salpicaduras de ácido",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_salpicaduras_acido.html"
+    },
+    {
+        "nombre": "Hoja retumbante",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "1 ronda",
+        "componentes": "S, M",
+        "enlace": "hechizo_hoja_retumbante.html"
+    },
+    {
+        "nombre": "Crear hoguera",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_crear_hoguera.html"
+    },
+    {
+        "nombre": "Luces danzantes",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 Pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_luces_danzantes.html"
+    },
+    {
+        "nombre": "Proyectil de fuego",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_proyectil_fuego.html"
+    },
+    {
+        "nombre": "Escarcha mordiente",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_escarcha_mordiente.html"
+    },
+    {
+        "nombre": "Hoja de llama verde",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "Instantáneo",
+        "componentes": "S, M",
+        "enlace": "hechizo_hoja_flama_verde.html"
+    },
+    {
+        "nombre": "Guía",
+        "escuela": "Adivinación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_guia.html"
+    },
+    {
+        "nombre": "Luz",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "1 hora",
+        "componentes": "V, M",
+        "enlace": "hechizo_luz.html"
+    },
+    {
+        "nombre": "Atracción de relámpago",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 15 pies)",
+        "duracion": "Instantáneo",
+        "componentes": "V",
+        "enlace": "hechizo_atraccion_relampago.html"
+    },
+    {
+        "nombre": "Mano de mago",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "30 Pies",
+        "duracion": "1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_mano_mago.html"
+    },
+    {
+        "nombre": "Piedra mágica",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "gama": "Toque",
+        "duracion": "1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_piedra_magica.html"
+    },
+    {
+        "nombre": "Remendar",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Minuto",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_remendar.html"
+    },
+    {
+        "nombre": "Mensaje",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 Pies",
+        "duracion": "1 ronda",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_mensaje.html"
+    },
+    {
+        "nombre": "Rocío venenoso",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "10 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_rocio_venenoso.html"
+    },
+    {
+        "nombre": "Prestidigitación",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "10 Pies",
+        "duracion": "Hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_prestidigitacion.html"
+    },
+    {
+        "nombre": "Rayos de escarcha",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_rayos_escarcha.html"
+    },
+    {
+        "nombre": "Resistencia",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_resistencia.html"
+    },
+    {
+        "nombre": "Toque electrizante",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_toque_electrizante.html"
+    },
+    {
+        "nombre": "Preservar moribundo",
+        "escuela": "Nigromancia",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_preservar_moribundo.html"
+    },
+    {
+        "nombre": "Estallido de espadas",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "Instantáneo",
+        "componentes": "V",
+        "enlace": "hechizo_estallido_espadas.html"
+    },
+    {
+        "nombre": "Látigo de espinas",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "30 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_latigo_espinas.html"
+    },
+    {
+        "nombre": "Estruendo de trueno",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Yo (radio de 5 pies)",
+        "duracion": "Instantáneo",
+        "componentes": "S",
+        "enlace": "hechizo_estruendo_trueno.html"
+    }
+            ],
+            "1Lvl": [
+            {
+        "nombre": "Misil Mágico",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_misil_magico.html"
+    },
+    {
+        "nombre": "Escudo",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Reacción",
+        "gama": "Personal",
+        "duracion": "1 ronda",
+        "componentes": "V, S",
+        "enlace": "hechizo_escudo.html"
+    },
+    {
+        "nombre": "Rayo de escarcha",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 Pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_rayo_escarcha.html"
+    },
+    {
+        "nombre": "Durabilidad de la piedra",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_durabilidad_piedra.html"
+    },
+    {
+        "nombre": "Armadura de mago",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "8 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_armadura_mago.html"
+    },
+    {
+        "nombre": "Detectar enemigos invisibles",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "30 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_enemigos_invisibles.html"
+    },
+    {
+        "nombre": "Absorber elementos",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Reacción",
+        "gama": "Personal",
+        "duracion": "1 ronda",
+        "componentes": "S",
+        "enlace": "hechizo_absorber_elementos.html"
+    },
+    {
+        "nombre": "Alarma",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Minuto",
+        "gama": "30 pies",
+        "duracion": "8 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_alarma.html"
+    },
+    {
+        "nombre": "Arma arcana (UA)",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "gama": "Personal",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_arma_arcana.html"
+    },
+    {
+        "nombre": "Catapulta",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 pies",
+        "duracion": "Instantáneo",
+        "componentes": "S",
+        "enlace": "hechizo_catapulta.html"
+    },
+    {
+        "nombre": "Curar heridas",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_curar_heridas.html"
+    },
+    {
+        "nombre": "Detectar magia",
+        "escuela": "Adivinación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Personal",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S",
+        "enlace": "hechizo_detectar_magia.html"
+    },
+    {
+        "nombre": "Disfrazarse",
+        "escuela": "Ilusión",
+        "tiempo_casting": "1 Acción",
+        "gama": "Personal",
+        "duracion": "1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_disfrazarse.html"
+    },
+    {
+        "nombre": "Retirada expeditiva",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "gama": "Personal",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S",
+        "enlace": "hechizo_retirada_expeditiva.html"
+    },
+    {
+        "nombre": "Fuego feérico",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V",
+        "enlace": "hechizo_fuego_feerico.html"
+    },
+    {
+        "nombre": "Falsa vida",
+        "escuela": "Nigromancia",
+        "tiempo_casting": "1 Acción",
+        "gama": "Personal",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_falsa_vida.html"
+    },
+    {
+        "nombre": "Caída de pluma",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Reacción",
+        "gama": "60 pies",
+        "duracion": "1 minuto",
+        "componentes": "V, M",
+        "enlace": "hechizo_caida_pluma.html"
+    },
+    {
+        "nombre": "Grasa",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 pies",
+        "duracion": "1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_grasa.html"
+    },
+    {
+        "nombre": "Identificar",
+        "escuela": "Adivinación",
+        "tiempo_casting": "1 Minuto",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_identificar.html"
+    },
+    {
+        "nombre": "Salto",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_salto.html"
+    },
+    {
+        "nombre": "Zancada amplia",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_zancada_amplia.html"
+    },
+    {
+        "nombre": "Purificar comida y bebida",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "10 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_purificar_comida.html"
+    },
+    {
+        "nombre": "Santuario",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción bonus",
+        "gama": "30 pies",
+        "duracion": "1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_santuario.html"
+    },
+    {
+        "nombre": "Trampa",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Minuto",
+        "gama": "Toque",
+        "duracion": "Hasta ser activada",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_trampa.html"
+    },
+    {
+        "nombre": "Brebaje cáustico de Tasha",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Personal (línea de 30 pies)",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_brebaje_caustico.html"
+    }
+            ],
+
+            "2Lvl": [
+            {
+        "nombre": "Refuerzo",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 Pies",
+        "duracion": "8 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_refuerzo.html"
+    },
+    {
+        "nombre": "Burbuja de aire",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 Pies",
+        "duracion": "24 horas",
+        "componentes": "S",
+        "enlace": "hechizo_burbuja_aire.html"
+    },
+    {
+        "nombre": "Alterar apariencia",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Personal",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_alterar_apariencia.html"
+    },
+    {
+        "nombre": "Candado arcano",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Hasta ser disipado",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_candado_arcano.html"
+    },
+    {
+        "nombre": "Imagen borrosa",
+        "escuela": "Ilusión",
+        "tiempo_casting": "1 Acción",
+        "rango": "Personal",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V",
+        "enlace": "hechizo_imagen_borrosa.html"
+    },
+    {
+        "nombre": "Llama continua",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Hasta ser disipada",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_llama_continua.html"
+    },
+    {
+        "nombre": "Visión en la oscuridad",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "8 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_vision_oscuridad.html"
+    },
+    {
+        "nombre": "Potenciar habilidad",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_potenciar_habilidad.html"
+    },
+    {
+        "nombre": "Agrandar/reducir",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_agrandar_reducir.html"
+    },
+    {
+        "nombre": "Calentar metal",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_calentar_metal.html"
+    },
+    {
+        "nombre": "Invisibilidad",
+        "escuela": "Ilusión",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_invisibilidad.html"
+    },
+    {
+        "nombre": "Paseo cinético",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "rango": "Personal",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "S",
+        "enlace": "hechizo_paseo_cinetico.html"
+    },
+    {
+        "nombre": "Restauración menor",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_restauracion_menor.html"
+    },
+    {
+        "nombre": "Levitación",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 pies",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_levitacion.html"
+    },
+    {
+        "nombre": "Boca mágica",
+        "escuela": "Ilusión",
+        "tiempo_casting": "1 Minuto",
+        "rango": "30 pies",
+        "duracion": "Hasta ser disipado",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_boca_magica.html"
+    },
+    {
+        "nombre": "Arma mágica",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_arma_magica.html"
+    },
+    {
+        "nombre": "Protección contra veneno",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_proteccion_veneno.html"
+    },
+    {
+        "nombre": "Pirotécnia",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_pirotecnia.html"
+    },
+    {
+        "nombre": "Truco con la cuerda",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_truco_cuerda.html"
+    },
+    {
+        "nombre": "Ver lo invisible",
+        "escuela": "Adivinación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Personal",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_ver_invisible.html"
+    },
+    {
+        "nombre": "Escribir en el cielo",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Visual",
+        "duracion": "Concentración, hasta 1 día",
+        "componentes": "V, S",
+        "enlace": "hechizo_escribir_cielo.html"
+    },
+    {
+        "nombre": "Trepar como araña",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_trepar_arana.html"
+    },
+    {
+        "nombre": "Vórtice de teletransporte",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "90 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_vortice_teletransporte.html"
+    },
+    {
+        "nombre": "Telaraña",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "60 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_telaraña.html"
+    }
+
+            ],
+            "3Lvl": [
+
+            {
+        "nombre": "Zancada de Ashardalon",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "rango": "Personal",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_zancada_ashardalon.html"
+    },
+    {
+        "nombre": "Parpadear",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Personal",
+        "duracion": "1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_parpadear.html"
+    },
+    {
+        "nombre": "Siesta felina",
+        "escuela": "Encantamiento",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "10 minutos",
+        "componentes": "S, M",
+        "enlace": "hechizo_siesta_felina.html"
+    },
+    {
+        "nombre": "Crear comida y agua",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_crear_comida_agua.html"
+    },
+    {
+        "nombre": "Disipar magia",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "120 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_disipar_magia.html"
+    },
+    {
+        "nombre": "Arma elemental",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_arma_elemental.html"
+    },
+    {
+        "nombre": "Flechas llameantes",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_flechas_llameantes.html"
+    },
+    {
+        "nombre": "Zancada de fuego (UA)",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción bonus",
+        "rango": "Personal",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_zancada_fuego.html"
+    },
+    {
+        "nombre": "Volar",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_volar.html"
+    },
+    {
+        "nombre": "Glifo de protección",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Hora",
+        "rango": "Toque",
+        "duracion": "Hasta ser disipado o activado",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_glifo_proteccion.html"
+    },
+    {
+        "nombre": "Prisa",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_prisa.html"
+    },
+    {
+        "nombre": "Casa de naipes (UA)",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Minuto",
+        "rango": "Toque",
+        "duracion": "24 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_casa_naipes.html"
+    },
+    {
+        "nombre": "Fortaleza mental",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V",
+        "enlace": "hechizo_fortaleza_mental.html"
+    },
+    {
+        "nombre": "Protección contra energía",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_proteccion_energia.html"
+    },
+    {
+        "nombre": "Revivir",
+        "escuela": "Nigromancia",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_revivir.html"
+    },
+    {
+        "nombre": "Sirviente diminuto",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Minuto",
+        "rango": "Toque",
+        "duracion": "8 horas",
+        "componentes": "V, S",
+        "enlace": "hechizo_sirviente_diminuto.html"
+    },
+    {
+        "nombre": "Respirar bajo el agua",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "24 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_respirar_agua.html"
+    },
+    {
+        "nombre": "Caminar sobre el agua",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_caminar_agua.html"
+    }
+
+            ],
+            "4Lvl": [
+            {
+        "nombre": "Ojo Arcano",
+        "escuela": "Adivinación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_ojo_arcano.html"
+    },
+    {
+        "nombre": "Perdición Elemental",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "90 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_perdicion_elemental.html"
+    },
+    {
+        "nombre": "Fabricar",
+        "escuela": "Transmutación",
+        "tiempo_casting": "10 Minutos",
+        "rango": "120 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_fabricar.html"
+    },
+    {
+        "nombre": "Libertad de Movimiento",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_libertad_movimiento.html"
+    },
+    {
+        "nombre": "Cofre Secreto de Leomund",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_cofre_secreto.html"
+    },
+    {
+        "nombre": "Perro Fiel de Mordenkainen",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "8 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_perro_fiel.html"
+    },
+    {
+        "nombre": "Santuario Privado de Mordenkainen",
+        "escuela": "Abjuración",
+        "tiempo_casting": "10 Minutos",
+        "rango": "120 pies",
+        "duracion": "24 horas",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_santuario_privado.html"
+    },
+    {
+        "nombre": "Esfera Resiliente de Otiluke",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "rango": "30 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_esfera_resiliente.html"
+    },
+    {
+        "nombre": "Formar Piedra",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_formar_piedra.html"
+    },
+    {
+        "nombre": "Piel de Piedra",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "rango": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_piel_piedra.html"
+    },
+    {
+        "nombre": "Invocar Constructo",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "rango": "90 pies",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_invocar_constructo.html"
+    }
+            ],
+            "5Lvl": [
+            {
+        "nombre": "Puño de hierro",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "60 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S",
+        "enlace": "hechizo_puño_iron.html"
+    },
+    {
+        "nombre": "Teletransportación menor",
+        "escuela": "Conjuro",
+        "tiempo_casting": "1 Acción",
+        "gama": "30 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_teletransportacion_menor.html"
+    },
+    {
+        "nombre": "Resurrección",
+        "escuela": "Necromancia",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_resurreccion.html"
+    },
+    {
+        "nombre": "Objetos animados",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S",
+        "enlace": "hechizo_objetos_animados.html"
+    },
+    {
+        "nombre": "Mano de Bigby",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Concentración, hasta 1 minuto",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_mano_bigby.html"
+    },
+    {
+        "nombre": "Crear timón de nave espacial",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_crear_timon_nave_espacial.html"
+    },
+    {
+        "nombre": "Creación",
+        "escuela": "Ilusión",
+        "tiempo_casting": "1 Minuto",
+        "gama": "30 pies",
+        "duracion": "Especial",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_creacion.html"
+    },
+    {
+        "nombre": "Restauración mayor",
+        "escuela": "Abjuración",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_restauracion_mayor.html"
+    },
+    {
+        "nombre": "Empoderamiento de habilidades",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "Toque",
+        "duracion": "Concentración, hasta 1 hora",
+        "componentes": "V, S",
+        "enlace": "hechizo_empoderamiento_habilidades.html"
+    },
+    {
+        "nombre": "Transmutar roca",
+        "escuela": "Transmutación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Instantáneo",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_transmutar_roca.html"
+    },
+    {
+        "nombre": "Muro de piedra",
+        "escuela": "Evocación",
+        "tiempo_casting": "1 Acción",
+        "gama": "120 pies",
+        "duracion": "Concentración, hasta 10 minutos",
+        "componentes": "V, S, M",
+        "enlace": "hechizo_muro_piedra.html"
+    }
+            ]
+        };
+
+        // Función para actualizar la tabla según el nivel seleccionado
+        function actualizarTabla(nivel) {
+            const tablaHechizos = document.getElementById('tabla-hechizos').getElementsByTagName('tbody')[0];
+            tablaHechizos.innerHTML = ""; // Limpiar la tabla antes de agregar las filas
+
+            hechizos[nivel].forEach(hechizo => {
+                const row = tablaHechizos.insertRow();
+                row.innerHTML = `
+                    <td><a href="${hechizo.enlace}">${hechizo.nombre}</a></td>
+                    <td>${hechizo.escuela}</td>
+                    <td>${hechizo.tiempo_casting}</td>
+                    <td>${hechizo.gama}</td>
+                    <td>${hechizo.duracion}</td>
+                    <td>${hechizo.componentes}</td>
+                `;
+            });
+        }
+
+        // Inicializar la tabla con los hechizos de Cantrip
+        actualizarTabla("Cantrip");
+    </script>
+</body>
+</html>

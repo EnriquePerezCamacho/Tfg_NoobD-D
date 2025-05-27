@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Mago</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+ <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <h1>Clase Mago</h1>
+
+    <div class="section">
+        <p>Los magos son usuarios supremos de magia, definidos y unidos como una clase por los hechizos que lanzan. Basándose en el sutil tejido de la magia que impregna el cosmos, los magos lanzan hechizos de fuego explosivo, relámpagos arqueados, engaños sutiles, control mental de fuerza bruta y mucho más.</p>
+        <p>Debes tener una puntuación de Inteligencia de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+    </div>
+
+    <div class="section">
+        <h2>El Mago</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nivel</th>
+                    <th>Bono de competencia</th>
+                    <th>Funciones</th>
+                    <th>Cantrips Conocidos</th>
+                    <th>1º</th>
+                    <th>2º</th>
+                    <th>3º</th>
+                    <th>4º</th>
+                    <th>5º</th>
+                    <th>6º</th>
+                    <th>7º</th>
+                    <th>8º</th>
+                    <th>9º</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>+2</td>
+                    <td>Lanzamiento de hechizos, Recuperación Arcana</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>+2</td>
+                    <td>Tradición Arcana</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>+2</td>
+                    <td>Fórmulas Cantrip (opcional)</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>+2</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>+3</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6º</td>
+                    <td>+3</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7º</td>
+                    <td>+3</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>8º</td>
+                    <td>+3</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>9º</td>
+                    <td>+4</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10º</td>
+                    <td>+4</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>11º</td>
+                    <td>+4</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>12º</td>
+                    <td>+4</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>13º</td>
+                    <td>+5</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>14º</td>
+                    <td>+5</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>15º</td>
+                    <td>+5</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>16º</td>
+                    <td>+5</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>17º</td>
+                    <td>+6</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>18º</td>
+                    <td>+6</td>
+                    <td>Maestría de hechizos</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>19º</td>
+                    <td>+6</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>20º</td>
+                    <td>+6</td>
+                    <td>Hechizos característicos</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la clase</h2>
+        <p>Como mago, obtienes las siguientes características de clase.</p>
+
+        <h3>Puntos de vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d6 por nivel de mago</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 6 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d6 (o 4) + tu modificador de Constitución por nivel de mago después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Ninguna</li>
+            <li><strong>Armas:</strong> Dagas, dardos, hondas, bastones, ballestas ligeras</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Inteligencia, Sabiduría</li>
+            <li><strong>Habilidades:</strong> Elige dos de Arcanismo, Historia, Perspicacia, Investigación, Medicina y Religión</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu experiencia:</p>
+        <ul>
+            <li>(a) un bastón o (b) una daga</li>
+            <li>(a) una bolsa de componentes o (b) un foco arcano</li>
+            <li>(a) una mochila de erudito o (b) una mochila de explorador</li>
+            <li>Un libro de hechizos</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Lanzamiento de hechizos</h2>
+        <p>Como estudiante de la magia arcana, tienes un libro de hechizos que contiene hechizos que muestran los primeros destellos de tu verdadero poder.</p>
+
+        <h3>Trucos</h3>
+        <p>En el nivel 1, conoces tres trucos de tu elección de la lista de hechizos de mago. Aprendes trucos adicionales de mago de tu elección en niveles superiores, como se muestra en la columna de Trucos Conocidos de la tabla del Mago.</p>
+
+        <h3>Libro de hechizos</h3>
+        <p>En el nivel 1, tienes un libro de hechizos que contiene seis hechizos de mago de nivel 1 de tu elección. Tu libro de hechizos es el repositorio de los hechizos de mago que conoces, excepto tus trucos, que están fijos en tu mente.</p>
+        <p>Los hechizos que agregas a tu libro de hechizos a medida que subes de nivel reflejan la investigación arcana que realizas por tu cuenta, así como los avances intelectuales que has tenido sobre la naturaleza del multiverso. Podrías encontrar otros hechizos durante tus aventuras. Por ejemplo, podrías descubrir un hechizo registrado en un pergamino en el cofre de un mago malvado o en un tomo polvoriento en una biblioteca antigua.</p>
+
+        <h4>Copiar un hechizo en el libro</h4>
+        <p>Cuando encuentras un hechizo de mago de nivel 1 o superior, puedes agregarlo a tu libro de hechizos si es de un nivel de hechizo que puedes preparar y si tienes tiempo para descifrarlo y copiarlo.</p>
+        <p>Copiar un hechizo en tu libro de hechizos implica reproducir la forma básica del hechizo, luego descifrar el sistema único de notación utilizado por el mago que lo escribió. Debes practicar el hechizo hasta que comprendas los sonidos o gestos requeridos, luego transcribirlo en tu libro de hechizos usando tu propia notación.</p>
+        <p>Por cada nivel del hechizo, el proceso toma 2 horas y cuesta 50 gp. El costo representa los componentes materiales que gastas mientras experimentas con el hechizo para dominarlo, así como las tintas finas que necesitas para registrarlo. Una vez que hayas gastado este tiempo y dinero, puedes preparar el hechizo como cualquier otro.</p>
+
+        <h4>Reemplazar el libro</h4>
+        <p>Puedes copiar un hechizo de tu propio libro de hechizos en otro libro, por ejemplo, si deseas hacer una copia de seguridad de tu libro de hechizos. Esto es como copiar un nuevo hechizo en tu libro de hechizos, pero más rápido y fácil, ya que entiendes tu propia notación y ya sabes cómo lanzar el hechizo. Solo necesitas gastar 1 hora y 10 gp por cada nivel del hechizo copiado.</p>
+        <p>Si pierdes tu libro de hechizos, puedes usar el mismo procedimiento para transcribir los hechizos que has preparado en un nuevo libro de hechizos. Completar el resto de tu libro de hechizos requiere que encuentres nuevos hechizos para hacerlo, como es normal. Por esta razón, muchos magos guardan copias de seguridad de sus libros de hechizos en un lugar seguro.</p>
+
+        <h4>Apariencia del libro</h4>
+        <p>Tu libro de hechizos es una compilación única de hechizos, con sus propios adornos decorativos y notas al margen. Podría ser un volumen de cuero simple y funcional que recibiste como regalo de tu maestro, un tomo finamente encuadernado con bordes dorados que encontraste en una biblioteca antigua, o incluso una colección suelta de notas reunidas después de que perdiste tu libro de hechizos anterior en un accidente.</p>
+
+        <h3>Preparar y lanzar hechizos</h3>
+        <p>La tabla del Mago muestra cuántas ranuras de hechizo tienes para lanzar tus hechizos de mago de nivel 1 y superior. Para lanzar uno de estos hechizos, debes gastar una ranura de hechizo del nivel del hechizo o superior. Recuperas todas las ranuras de hechizo gastadas cuando terminas un descanso largo.</p>
+        <p>Preparas la lista de hechizos de mago que están disponibles para que los lances. Para hacerlo, elige una cantidad de hechizos de mago de tu libro de hechizos igual a tu modificador de Inteligencia + tu nivel de mago (mínimo un hechizo). Los hechizos deben ser de un nivel para el cual tengas ranuras de hechizo.</p>
+        <p>Por ejemplo, si eres un mago de nivel 3, tienes cuatro ranuras de hechizo de nivel 1 y dos de nivel 2. Con una Inteligencia de 16, tu lista de hechizos preparados puede incluir seis hechizos de nivel 1 o 2, en cualquier combinación, elegidos de tu libro de hechizos. Si preparas el hechizo de nivel 1 misil mágico, puedes lanzarlo usando una ranura de hechizo de nivel 1 o 2. Lanzar el hechizo no lo elimina de tu lista de hechizos preparados.</p>
+        <p>Puedes cambiar tu lista de hechizos preparados cuando terminas un descanso largo. Preparar una nueva lista de hechizos de mago requiere tiempo dedicado a estudiar tu libro de hechizos y memorizar las invocaciones y gestos que debes hacer para lanzar el hechizo: al menos 1 minuto por nivel de hechizo para cada hechizo en tu lista.</p>
+
+        <h3>Característica de lanzamiento de hechizos</h3>
+        <p>La Inteligencia es tu característica de lanzamiento de hechizos para tus hechizos de mago, ya que aprendes tus hechizos a través de un estudio dedicado y memorización. Usas tu Inteligencia siempre que un hechizo se refiera a tu característica de lanzamiento de hechizos. Además, usas tu modificador de Inteligencia cuando estableces la CD de la tirada de salvación de un hechizo de mago que lanzas y cuando haces una tirada de ataque con uno.</p>
+        <p><strong>CD de salvación de hechizos</strong> = 8 + tu bono de competencia + tu modificador de Inteligencia</p>
+        <p><strong>Modificador de ataque de hechizos</strong> = tu bono de competencia + tu modificador de Inteligencia</p>
+
+        <h3>Lanzamiento ritual</h3>
+        <p>Puedes lanzar un hechizo de mago como un ritual si ese hechizo tiene la etiqueta de ritual y lo tienes en tu libro de hechizos. No necesitas tener el hechizo preparado.</p>
+
+        <h3>Foco de lanzamiento de hechizos</h3>
+        <p>Puedes usar un foco arcano como foco de lanzamiento de hechizos para tus hechizos de mago.</p>
+
+        <h3>Aprender hechizos de nivel 1 y superior</h3>
+        <p>Cada vez que ganas un nivel de mago, puedes agregar dos hechizos de mago de tu elección a tu libro de hechizos. Cada uno de estos hechizos debe ser de un nivel para el cual tengas ranuras de hechizo, como se muestra en la tabla del Mago. En tus aventuras, podrías encontrar otros hechizos que puedes agregar a tu libro de hechizos.</p>
+    </div>
+
+    <div class="section">
+        <h2>Recuperación Arcana</h2>
+        <p>Has aprendido a recuperar parte de tu energía mágica estudiando tu libro de hechizos. Una vez al día, cuando terminas un descanso corto, puedes elegir ranuras de hechizo gastadas para recuperar. Las ranuras de hechizo pueden tener un nivel combinado que sea igual o menor a la mitad de tu nivel de mago (redondeado hacia arriba), y ninguna de las ranuras puede ser de nivel 6 o superior.</p>
+        <p>Por ejemplo, si eres un mago de nivel 4, puedes recuperar hasta dos niveles de ranuras de hechizo. Puedes recuperar una ranura de hechizo de nivel 2 o dos ranuras de hechizo de nivel 1.</p>
+    </div>
+
+    <div class="section">
+        <h2>Tradición Arcana</h2>
+        <p>Cuando alcanzas el nivel 2, eliges una tradición arcana, moldeando tu práctica de la magia a través de una de las siguientes escuelas. Tu elección te otorga características en el nivel 2 y nuevamente en los niveles 6, 10 y 14.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Escuela</th>
+                    <th>Fuente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abjuración</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Bladesinging</td>
+                    <td>Sword Coast Adventurer's Guide</td>
+                </tr>
+                <tr>
+                    <td>Chronurgia</td>
+                    <td>Explorer's Guide to Wildemount</td>
+                </tr>
+                <tr>
+                    <td>Conjuración</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Adivinación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Encantamiento</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Evocación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Graviturgia</td>
+                    <td>Explorer's Guide to Wildemount</td>
+                </tr>
+                <tr>
+                    <td>Ilusión</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Necromancia</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Orden de los escribas</td>
+                    <td>El caldero de todo de Tasha</td>
+                </tr>
+                <tr>
+                    <td>Transmutación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Magia de guerra</td>
+                    <td>Guía de Xanathar para todo</td>
+                </tr>
+                <tr>
+                    <td>Runecrafter</td>
+                    <td>Arcanos Desenterrados 83 - Opciones Gigantes</td>
+                </tr>
+                <tr>
+                    <td>Artífice</td>
+                    <td>Arcanos desenterrados 1 - Eberron</td>
+                </tr>
+                <tr>
+                    <td>Invención</td>
+                    <td>Arcanos Desenterrados 46 - Tres Subclases</td>
+                </tr>
+                <tr>
+                    <td>Maestría de la tradición</td>
+                    <td>Arcano Desenterrado 29 - Brujo y Mago</td>
+                </tr>
+                <tr>
+                    <td>Mago de Feudo del Saber</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Prismari</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Quandrix</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Pluma de Plata</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Onomancia</td>
+                    <td>Arcano Desenterrado 63 - Clérigo, Druida, Mago</td>
+                </tr>
+                <tr>
+                    <td>Orden de los escribas</td>
+                    <td>Arcanos Desenterrados 72 - Subclases revisadas</td>
+                </tr>
+                <tr>
+                    <td>Psionicos</td>
+                    <td>Arcanos Desenterrados 66 - Luchador, Pícaro, Mago</td>
+                </tr>
+                <tr>
+                    <td>Tecnomancia</td>
+                    <td>Arcanos Desenterrados 7 - Magia Moderna</td>
+                </tr>
+                <tr>
+                    <td>Teurgia</td>
+                    <td>Arcanos Desenterrados 33 - Mago Revisitado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Fórmulas Cantrip (Opcional)</h2>
+        <p>En el nivel 3, has escrito un conjunto de fórmulas arcanas en tu libro de hechizos que puedes usar para formular un truco en tu mente. Cada vez que termines un largo descanso y consultes esas fórmulas en tu libro de hechizos, puedes reemplazar un truco de mago que conozcas por otro truco de la lista de hechizos de mago.</p>
+    </div>
+
+    <div class="section">
+        <h2>Mejora de la puntuación de habilidad</h2>
+        <p>Cuando alcanzas el nivel 4, y nuevamente en los niveles 8, 12, 16 y 19, puedes aumentar una puntuación de habilidad de tu elección en 2, o puedes aumentar dos puntuaciones de habilidad de tu elección en 1. Como de costumbre, no puedes aumentar una puntuación de habilidad por encima de 20 usando esta característica.</p>
+    </div>
+
+    <div class="section">
+        <h2>Maestría de hechizos</h2>
+        <p>En el nivel 18, has logrado tal dominio sobre ciertos hechizos que puedes lanzarlos a voluntad. Elige un hechizo de mago de nivel 1 y un hechizo de mago de nivel 2 que estén en tu libro de hechizos. Puedes lanzar esos hechizos en su nivel más bajo sin gastar una ranura de hechizo cuando los tienes preparados. Si quieres lanzar cualquiera de los hechizos a un nivel superior, debes gastar una ranura de hechizo como de costumbre.</p>
+        <p>Al pasar 8 horas en estudio, puedes cambiar uno o ambos de los hechizos que elegiste por diferentes hechizos de los mismos niveles.</p>
+    </div>
+
+    <div class="section">
+        <h2>Hechizos característicos</h2>
+        <p>Cuando alcanzas el nivel 20, obtienes dominio sobre dos poderosos hechizos y puedes lanzarlos con poco esfuerzo. Elige dos hechizos de mago de nivel 3 en tu libro de hechizos como tus hechizos característicos. Siempre tienes estos hechizos preparados, no cuentan contra el número de hechizos que has preparado, y puedes lanzar cada uno de ellos una vez en el nivel 3 sin gastar una ranura de hechizo. Cuando lo haces, no puedes volver a hacerlo hasta que termines un descanso corto o largo.</p>
+        <p>Si quieres lanzar cualquiera de los hechizos a un nivel superior, debes gastar una ranura de hechizo como de costumbre.</p>
+    </div>
+
+</body>
+</html>

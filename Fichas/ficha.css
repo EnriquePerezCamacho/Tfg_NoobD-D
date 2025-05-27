@@ -1,0 +1,144 @@
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-image: url('https://st5.depositphotos.com/1001735/64454/i/450/depositphotos_644548132-stock-photo-old-yellowed-open-book-black.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Georgia', serif;
+            color: #2b2b2b;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            font-size: 2.5em;
+            color: #4b2e14;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #decdb6;
+        }
+
+        #ficha-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .book {
+            display: flex;
+            width: 100%;
+            gap: 100px;
+            justify-content: center;
+        }
+
+        .page {
+            width: 48%;
+            background-color: rgba(255, 248, 225, 0.94);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.3);
+        }
+
+        fieldset {
+            border: 1px solid #c2a97e;
+            margin-bottom: 30px;
+            padding: 18px 20px;
+            border-radius: 10px;
+        }
+
+        legend h2 {
+            font-size: 1.6em;
+            color: #5b3a1e;
+            text-shadow: 1px 1px 1px #e0d3b0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 30px;
+        }
+
+        .atributos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 30px;
+        }
+
+        .atributo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            background: #fdf9e4;
+            border: 1px solid #a0875e;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 80px;
+        }
+
+        .large-textarea {
+            min-height: 180px;
+            font-size: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #442a13;
+        }
+
+        .modificador {
+            font-size: 15px;
+            font-weight: bold;
+            color: #623b11;
+            margin-top: 6px;
+        }
+
+        button {
+            padding: 14px 24px;
+            font-size: 18px;
+            background-color: #bb8c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 14px auto 0;
+            display: block;
+        }
+
+        button:hover {
+            background-color: #9f7530;
+        }
+
+        .grid-2 label input[type="checkbox"] {
+            margin-right: 6px;
+        }
+
+        .imagen-container {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .imagen-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .imagen-container input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            font-size: 14px;
+        }

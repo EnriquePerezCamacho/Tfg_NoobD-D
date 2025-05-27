@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Clérigos</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Clérigos</h1>
+    <p>Los clérigos son intermediarios entre el mundo mortal y los planos distantes de los dioses. Tan variados como los dioses a los que sirven, los clérigos se esfuerzan por encarnar la obra de sus deidades. Ningún sacerdote ordinario, un clérigo está imbuido de magia divina.</p>
+    <p>Debes tener una puntuación de Sabiduría de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+
+    <div class="section">
+        <h2>Tabla de Progresión del Clérigo</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Bono de competencia</th>
+                <th>Funciones</th>
+                <th>Cantrips Conocidos</th>
+                <th>1º</th>
+                <th>2º</th>
+                <th>3º</th>
+                <th>4º</th>
+                <th>5º</th>
+                <th>6º</th>
+                <th>7º</th>
+                <th>8º</th>
+                <th>9º</th>
+            </tr>
+            <tr>
+                <td>1º</td>
+                <td>+2</td>
+                <td>Lanzamiento de hechizos, Dominio divino</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- Repite las filas para cada nivel según la tabla proporcionada -->
+            <!-- ... -->
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados para Vida:</strong> 1d8 por nivel de clérigo</li>
+            <li><strong>Puntos de Vida en el 1er Nivel:</strong> 8 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Vida en Niveles Superiores:</strong> 1d8 (o 5) + tu modificador de Constitución por nivel de clérigo después del 1er</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Armadura ligera, armadura mediana, escudos</li>
+            <li><strong>Armas:</strong> Todas las armas simples</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Sabiduría, Carisma</li>
+            <li><strong>Habilidades:</strong> Elige dos de Historia, Perspicacia, Medicina, Persuasión y Religión</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu experiencia:</p>
+        <ul>
+            <li>(a) una maza o (b) un martillo de guerra (si es competente)</li>
+            <li>(a) cota de malla, (b) armadura de cuero, o (c) cota de malla (si es competente)</li>
+            <li>(a) una ballesta ligera y 20 flechas o (b) cualquier arma simple</li>
+            <li>(a) una mochila de sacerdote o (b) una mochila de explorador</li>
+            <li>Un escudo y un símbolo sagrado</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Lanzamiento de Hechizos</h2>
+        <p>Como conducto para el poder divino, puedes lanzar hechizos de clérigo.</p>
+
+        <h3>Cantrips</h3>
+        <p>En el nivel 1, conoces tres cantrips de tu elección de la lista de hechizos del clérigo. Aprenderás cantrips de clérigo adicionales de tu elección en niveles más altos, como se muestra en la columna Cantrips conocidos de la tabla de clérigos.</p>
+
+        <h3>Ranuras de Hechizos</h3>
+        <p>La tabla de Clérigo muestra cuántas ranuras de hechizos tienes para lanzar tus hechizos de Clérigo de nivel 1 y superior. Para lanzar uno de estos hechizos, debes gastar una ranura del nivel del hechizo o superior. Recuperas todas las ranuras de hechizos gastadas cuando terminas un largo descanso.</p>
+
+        <h3>Preparación de Hechizos</h3>
+        <p>Preparas la lista de hechizos de clérigo que están disponibles para que los lances, eligiendo de la lista de hechizos de clérigo. Cuando lo hagas, elige un número de hechizos de clérigo igual a tu modificador de Sabiduría + tu nivel de clérigo (mínimo de un hechizo). Los hechizos deben ser de un nivel para el que tengas ranuras de hechizos.</p>
+
+        <h3>Habilidad de Lanzamiento de Hechizos</h3>
+        <p>La sabiduría es tu habilidad de lanzar hechizos para tus hechizos de clérigo. El poder de tus hechizos proviene de tu devoción a tu deidad. Usas tu Sabiduría siempre que un hechizo de clérigo se refiera a tu habilidad de lanzamiento de hechizos. Además, usas tu modificador de Sabiduría cuando estableces la CD de la tirada de salvación para un hechizo de clérigo que lanzas y cuando haces una tirada de ataque con uno.</p>
+        <p><strong>Salvación de hechizo CD = 8 + tu bonificación de competencia + tu modificador de Sabiduría</strong></p>
+        <p><strong>Modificador de ataque de hechizo = tu bonificación de competencia + tu modificador de sabiduría</strong></p>
+
+        <h3>Lanzamiento Ritual</h3>
+        <p>Puedes lanzar un hechizo de clérigo como ritual si ese hechizo tiene la etiqueta de ritual y tienes el hechizo preparado.</p>
+
+        <h3>Enfoque de Lanzamiento de Hechizos</h3>
+        <p>Puedes usar un símbolo sagrado como foco de lanzamiento de hechizos para tus hechizos de clérigo.</p>
+    </div>
+
+    <div class="section">
+        <h2>Dominio Divino</h2>
+        <p>En el nivel 1, eliges un dominio moldeado por tu elección de Deidad y los dones que te otorgan. Tu elección te otorga hechizos de dominio y otras características cuando lo eliges en el nivel 1. También te otorga formas adicionales de usar Channel Divinity cuando obtienes esa función en el 2.º nivel, y beneficios adicionales en los niveles 6.º, 8.º y 17.º.</p>
+
+        <h3>Dominios</h3>
+        <ul>
+            <li><strong>Arcanos:</strong> Guía del aventurero de Sword Coast</li>
+            <li><strong>Muerte:</strong> Guía del Dungeon Master</li>
+            <li><strong>Fragua:</strong> Guía de Xanathar para todo</li>
+            <li><strong>Tumba:</strong> Guía de Xanathar para todo</li>
+            <li><strong>Conocimiento:</strong> Manual del jugador</li>
+            <li><strong>Vida:</strong> Manual del jugador</li>
+            <li><strong>Luz:</strong> Manual del jugador</li>
+            <li><strong>Naturaleza:</strong> Manual del jugador</li>
+            <li><strong>Orden:</strong> Guía del maestro de hermandad del Caldero de Todo de Rávnica</li>
+            <li><strong>Paz:</strong> El caldero de todo de Tasha</li>
+            <li><strong>Tempestad:</strong> Manual del jugador</li>
+            <li><strong>Engaño:</strong> Manual del jugador</li>
+            <li><strong>Crepúsculo:</strong> El caldero de todo de Tasha</li>
+            <li><strong>Guerra:</strong> Manual del jugador</li>
+        </ul>
+
+        <h3>Hechizos de Dominio</h3>
+        <p>Cada dominio tiene una lista de hechizos: sus hechizos de dominio que se obtienen en los niveles de clérigo anotados en la descripción del dominio. Una vez que obtienes un hechizo de dominio, siempre lo tienes preparado, y no cuenta para la cantidad de hechizos que puedes preparar cada día.</p>
+    </div>
+
+    <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+<h2>Características por Nivel</h2>
+<div id="botones-caracteristicas">
+    <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+    <button onclick="filtrarCaracteristicas('1')">Nivel 1</button>
+    <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+    <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+    <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+    <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+    <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+    <button onclick="filtrarCaracteristicas('7')">Nivel 7</button>
+    <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+    <button onclick="filtrarCaracteristicas('9')">Nivel 9</button>
+    <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+    <button onclick="filtrarCaracteristicas('11')">Nivel 11</button>
+    <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+    <button onclick="filtrarCaracteristicas('13')">Nivel 13</button>
+    <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+    <button onclick="filtrarCaracteristicas('15')">Nivel 15</button>
+    <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+    <button onclick="filtrarCaracteristicas('17')">Nivel 17</button>
+    <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+    <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+    <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+</div>
+
+<table id="tabla-caracteristicas">
+    <thead>
+        <tr>
+            <th>Nivel</th>
+            <th>Característica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Generado dinámicamente -->
+    </tbody>
+</table>
+
+<script>
+const caracteristicas = [
+  {nivel: 2, nombre: "Canalizar la Divinidad", descripcion: "Obtienes la capacidad de canalizar energía divina directamente de tu deidad. Comienzas con dos efectos: Convertir a los muertos vivientes y uno determinado por tu dominio. Algunos dominios otorgan efectos adicionales al subir de nivel." },
+  { 
+    nivel: 2, 
+    nombre: "Canalizar la Divinidad: Convertir a los Muertos Vivientes", 
+    descripcion: "Como acción, presentas tu símbolo sagrado y censuras a los muertos vivientes. Cada no-muerto a 30 pies debe hacer una salvación de Sabiduría. Si falla, se gira durante 1 minuto o hasta recibir daño." 
+  },
+  { 
+    nivel: 2, 
+    nombre: "Arnés Poder Divino (Opcional)", 
+    descripcion: "Puedes gastar un uso de tu Divinidad de Canal para recuperar una ranura de hechizo gastada. El nivel máximo de la ranura recuperada depende de tu bonificación de competencia." 
+  },
+  { 
+    nivel: 4, 
+    nombre: "Mejora de la Puntuación de Habilidad", 
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20." 
+  },
+  { 
+    nivel: 4, 
+    nombre: "Versatilidad de Cantrip (Opcional)", 
+    descripcion: "Cuando obtienes la Mejora de Puntuación de Habilidad, puedes reemplazar un cantrip conocido por otro de la lista de hechizos del clérigo." 
+  },
+  { 
+    nivel: 5, 
+    nombre: "Destruye a los Muertos Vivientes", 
+    descripcion: "Cuando un no-muerto falla contra tu Turno de No-muerto, es destruido instantáneamente si su índice de desafío es igual o inferior a un umbral determinado." 
+  },
+  { 
+    nivel: 8, 
+    nombre: "Golpes Benditos (Opcional)", 
+    descripcion: "Cuando infliges daño con un cantrip o un ataque de arma, haces 1d8 de daño radiante adicional. Sólo una vez por turno." 
+  },
+  { 
+    nivel: 10, 
+    nombre: "Intervención Divina", 
+    descripcion: "Puedes pedir a tu deidad que intervenga. Si sacas igual o menos que tu nivel en una tirada de percentiles, tu deidad ayuda. A nivel 20, la intervención es automática." 
+  }
+];
+
+
+function generarTabla(nivelFiltro = "todos") {
+    const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+    cuerpo.innerHTML = "";
+    caracteristicas.forEach(carac => {
+        if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${carac.nivel}</td>
+                <td>${carac.nombre}</td>
+                <td>${carac.descripcion}</td> 
+            `;
+            cuerpo.appendChild(fila);
+        }
+    });
+}
+
+function filtrarCaracteristicas(nivel) {
+    generarTabla(nivel);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    generarTabla();
+});
+</script>
+
+</body>
+</html>

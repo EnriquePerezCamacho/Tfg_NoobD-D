@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Hechicero</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+     <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Clase Mago</h1>
+
+    <div class="section">
+        <p>Los magos son usuarios supremos de magia, definidos y unidos como una clase por los hechizos que lanzan. Basándose en el sutil tejido de la magia que impregna el cosmos, los magos lanzan hechizos de fuego explosivo, relámpagos arqueados, engaños sutiles, control mental de fuerza bruta y mucho más.</p>
+        <p>Debes tener una puntuación de Inteligencia de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+    </div>
+
+    <div class="section">
+        <h2>El Mago</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nivel</th>
+                    <th>Bono de competencia</th>
+                    <th>Funciones</th>
+                    <th>Cantrips Conocidos</th>
+                    <th>1º</th>
+                    <th>2º</th>
+                    <th>3º</th>
+                    <th>4º</th>
+                    <th>5º</th>
+                    <th>6º</th>
+                    <th>7º</th>
+                    <th>8º</th>
+                    <th>9º</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>+2</td>
+                    <td>Lanzamiento de hechizos, Recuperación Arcana</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>+2</td>
+                    <td>Tradición Arcana</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>+2</td>
+                    <td>Fórmulas Cantrip (opcional)</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>+2</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>+3</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6º</td>
+                    <td>+3</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7º</td>
+                    <td>+3</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>8º</td>
+                    <td>+3</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>9º</td>
+                    <td>+4</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10º</td>
+                    <td>+4</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>11º</td>
+                    <td>+4</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>12º</td>
+                    <td>+4</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>13º</td>
+                    <td>+5</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>14º</td>
+                    <td>+5</td>
+                    <td>Función Tradición Arcana</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>15º</td>
+                    <td>+5</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>16º</td>
+                    <td>+5</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>17º</td>
+                    <td>+6</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>18º</td>
+                    <td>+6</td>
+                    <td>Maestría de hechizos</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>19º</td>
+                    <td>+6</td>
+                    <td>Mejora de la puntuación de habilidad</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>20º</td>
+                    <td>+6</td>
+                    <td>Hechizos característicos</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la clase</h2>
+        <p>Como mago, obtienes las siguientes características de clase.</p>
+
+        <h3>Puntos de vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d6 por nivel de mago</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 6 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d6 (o 4) + tu modificador de Constitución por nivel de mago después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Ninguna</li>
+            <li><strong>Armas:</strong> Dagas, dardos, hondas, bastones, ballestas ligeras</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Inteligencia, Sabiduría</li>
+            <li><strong>Habilidades:</strong> Elige dos de Arcanismo, Historia, Perspicacia, Investigación, Medicina y Religión</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu experiencia:</p>
+        <ul>
+            <li>(a) un bastón o (b) una daga</li>
+            <li>(a) una bolsa de componentes o (b) un foco arcano</li>
+            <li>(a) una mochila de erudito o (b) una mochila de explorador</li>
+            <li>Un libro de hechizos</li>
+        </ul>
+    </div>
+            <!-- 🔽 SECCIÓN INTERACTIVA DE CARACTERÍSTICAS 🔽 -->
+            <h2>Características por Nivel</h2>
+            <div id="botones-caracteristicas">
+                <button onclick="filtrarCaracteristicas('todos')">Todos</button>
+                <button onclick="filtrarCaracteristicas('1')">Nivel 1</button>
+                <button onclick="filtrarCaracteristicas('2')">Nivel 2</button>
+                <button onclick="filtrarCaracteristicas('3')">Nivel 3</button>
+                <button onclick="filtrarCaracteristicas('4')">Nivel 4</button>
+                <button onclick="filtrarCaracteristicas('5')">Nivel 5</button>
+                <button onclick="filtrarCaracteristicas('6')">Nivel 6</button>
+                <button onclick="filtrarCaracteristicas('7')">Nivel 7</button>
+                <button onclick="filtrarCaracteristicas('8')">Nivel 8</button>
+                <button onclick="filtrarCaracteristicas('9')">Nivel 9</button>
+                <button onclick="filtrarCaracteristicas('10')">Nivel 10</button>
+                <button onclick="filtrarCaracteristicas('11')">Nivel 11</button>
+                <button onclick="filtrarCaracteristicas('12')">Nivel 12</button>
+                <button onclick="filtrarCaracteristicas('13')">Nivel 13</button>
+                <button onclick="filtrarCaracteristicas('14')">Nivel 14</button>
+                <button onclick="filtrarCaracteristicas('15')">Nivel 15</button>
+                <button onclick="filtrarCaracteristicas('16')">Nivel 16</button>
+                <button onclick="filtrarCaracteristicas('17')">Nivel 17</button>
+                <button onclick="filtrarCaracteristicas('18')">Nivel 18</button>
+                <button onclick="filtrarCaracteristicas('19')">Nivel 19</button>
+                <button onclick="filtrarCaracteristicas('20')">Nivel 20</button>
+            </div>
+            
+            <table id="tabla-caracteristicas">
+                <thead>
+                    <tr>
+                        <th>Nivel</th>
+                        <th>Característica</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Generado dinámicamente -->
+                </tbody>
+            </table>
+            
+            <script>
+            const caracteristicas = [
+            {nivel: 1,nombre: "Lanzamiento de Hechizos",descripcion: "Tienes un libro de hechizos que contiene hechizos de mago. Conoces tres trucos y seis hechizos de nivel 1 al comenzar. Aprendes más trucos y puedes encontrar y copiar nuevos hechizos."},
+  {nivel: 1,nombre: "Libro de Hechizos",descripcion: "Tu libro contiene los hechizos que conoces. Puedes copiar nuevos hechizos encontrados, y si pierdes tu libro, puedes reemplazarlo siguiendo procedimientos específicos."},
+  {nivel: 1,nombre: "Preparar y Lanzar Hechizos",descripcion: "Preparas una lista de hechizos de mago igual a tu modificador de Inteligencia + tu nivel de mago. Puedes cambiar tu lista al final de un descanso largo."},
+  {nivel: 1,nombre: "Característica de Lanzamiento de Hechizos",descripcion: "Tu habilidad de lanzamiento es la Inteligencia. Tu CD de salvación de hechizos es 8 + bono de competencia + modificador de Inteligencia."},
+  {nivel: 1,nombre: "Lanzamiento Ritual",descripcion: "Puedes lanzar un hechizo de mago como ritual si tiene la etiqueta ritual y está en tu libro, sin necesidad de tenerlo preparado."},
+  {nivel: 1,nombre: "Foco de Lanzamiento de Hechizos",descripcion: "Puedes usar un foco arcano como foco de lanzamiento de hechizos para tus hechizos de mago."},
+  {nivel: 1,nombre: "Aprender Hechizos de Nivel 1 y Superior",descripcion: "Cada vez que subes de nivel, puedes agregar dos hechizos de mago a tu libro de hechizos."},
+  {nivel: 1,nombre: "Recuperación Arcana",descripcion: "Una vez al día, después de un descanso corto, puedes recuperar ranuras de hechizo gastadas de nivel igual o menor a la mitad de tu nivel de mago (redondeado hacia arriba)."},
+  {nivel: 2,nombre: "Tradición Arcana",descripcion: "Eliges una escuela de magia para especializarte, recibiendo características adicionales en niveles 2, 6, 10 y 14."},
+  {nivel: 3,nombre: "Fórmulas Cantrip (Opcional)",descripcion: "Has escrito fórmulas para cambiar un truco conocido por otro truco de mago al finalizar un descanso largo."},
+  {
+    nivel: 4,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20."
+  },
+  {
+    nivel: 8,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20."
+  },
+  {
+    nivel: 12,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20."
+  },
+  {
+    nivel: 16,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20."
+  },
+  {
+    nivel: 18,
+    nombre: "Maestría de Hechizos",
+    descripcion: "Puedes lanzar un hechizo de nivel 1 y otro de nivel 2 preparados sin gastar una ranura. Puedes cambiarlos tras 8 horas de estudio."
+  },
+  {
+    nivel: 19,
+    nombre: "Mejora de la Puntuación de Habilidad",
+    descripcion: "Puedes aumentar una puntuación de habilidad en 2 o dos puntuaciones en 1. No puedes superar 20."
+  },
+  {
+    nivel: 20,
+    nombre: "Hechizos Característicos",
+    descripcion: "Elige dos hechizos de nivel 3 como característicos. Siempre los tienes preparados, puedes lanzarlos gratis una vez por descanso corto o largo."
+  }
+];
+            
+            
+            function generarTabla(nivelFiltro = "todos") {
+                const cuerpo = document.querySelector("#tabla-caracteristicas tbody");
+                cuerpo.innerHTML = "";
+                caracteristicas.forEach(carac => {
+                    if (nivelFiltro === "todos" || carac.nivel == nivelFiltro) {
+                        const fila = document.createElement("tr");
+                        fila.innerHTML = `
+                            <td>${carac.nivel}</td>
+                            <td>${carac.nombre}</td>
+                            <td>${carac.descripcion}</td> 
+                        `;
+                        cuerpo.appendChild(fila);
+                    }
+                });
+            }
+            
+            function filtrarCaracteristicas(nivel) {
+                generarTabla(nivel);
+            }
+            
+            document.addEventListener("DOMContentLoaded", () => {
+                generarTabla();
+            });
+            </script>
+    <div class="section">
+        <h2>Tradición Arcana</h2>
+        <p>Cuando alcanzas el nivel 2, eliges una tradición arcana, moldeando tu práctica de la magia a través de una de las siguientes escuelas. Tu elección te otorga características en el nivel 2 y nuevamente en los niveles 6, 10 y 14.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Escuela</th>
+                    <th>Fuente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abjuración</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Bladesinging</td>
+                    <td>Sword Coast Adventurer's Guide</td>
+                </tr>
+                <tr>
+                    <td>Chronurgia</td>
+                    <td>Explorer's Guide to Wildemount</td>
+                </tr>
+                <tr>
+                    <td>Conjuración</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Adivinación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Encantamiento</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Evocación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Graviturgia</td>
+                    <td>Explorer's Guide to Wildemount</td>
+                </tr>
+                <tr>
+                    <td>Ilusión</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Necromancia</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Orden de los escribas</td>
+                    <td>El caldero de todo de Tasha</td>
+                </tr>
+                <tr>
+                    <td>Transmutación</td>
+                    <td>Manual del jugador</td>
+                </tr>
+                <tr>
+                    <td>Magia de guerra</td>
+                    <td>Guía de Xanathar para todo</td>
+                </tr>
+                <tr>
+                    <td>Runecrafter</td>
+                    <td>Arcanos Desenterrados 83 - Opciones Gigantes</td>
+                </tr>
+                <tr>
+                    <td>Artífice</td>
+                    <td>Arcanos desenterrados 1 - Eberron</td>
+                </tr>
+                <tr>
+                    <td>Invención</td>
+                    <td>Arcanos Desenterrados 46 - Tres Subclases</td>
+                </tr>
+                <tr>
+                    <td>Maestría de la tradición</td>
+                    <td>Arcano Desenterrado 29 - Brujo y Mago</td>
+                </tr>
+                <tr>
+                    <td>Mago de Feudo del Saber</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Prismari</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Quandrix</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Mago de Pluma de Plata</td>
+                    <td>Arcanos desenterrados 79 - Magos de Strixhaven</td>
+                </tr>
+                <tr>
+                    <td>Onomancia</td>
+                    <td>Arcano Desenterrado 63 - Clérigo, Druida, Mago</td>
+                </tr>
+                <tr>
+                    <td>Orden de los escribas</td>
+                    <td>Arcanos Desenterrados 72 - Subclases revisadas</td>
+                </tr>
+                <tr>
+                    <td>Psionicos</td>
+                    <td>Arcanos Desenterrados 66 - Luchador, Pícaro, Mago</td>
+                </tr>
+                <tr>
+                    <td>Tecnomancia</td>
+                    <td>Arcanos Desenterrados 7 - Magia Moderna</td>
+                </tr>
+                <tr>
+                    <td>Teurgia</td>
+                    <td>Arcanos Desenterrados 33 - Mago Revisitado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

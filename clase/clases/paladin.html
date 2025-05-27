@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Paladines</title>
+    <link rel="stylesheet" href="StyleDeClases.Css">
+</head>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='../../Php/clases.php'">Clases</button></li>
+                <li><button onclick="location.href='../../Php/razas.php'">Razas</button></li>
+                <li><button onclick="location.href='../../Php/subclases.php'">Subclases</button></li>
+                <li><button onclick="location.href='../../Php/hechizos.php'">Hechizos</button></li>
+                <li><button onclick="location.href='../../Php/Dados.html'">Dados</button></li>
+                <li><button onclick="location.href='../../Php/perfil.php'">Perfil</button></li>
+            </ul>
+        </nav>
+    </header>
+ <!-- Botón flotante para volver a Clases -->
+    <a href="../../Php/clases.php" class="btn-volver">← Volver a Clases</a>
+    <a href="#top" class="btn-subir">↑ Subir</a>
+    
+    <h1>Paladines</h1>
+    <p>Ya sea jurando ante el altar de un dios y el testimonio de un sacerdote, en un claro sagrado ante los espíritus de la naturaleza y los seres feéricos, o en un momento de desesperación y dolor con los muertos como único testigo, el juramento de un paladín es un vínculo poderoso.</p>
+    <p>Debes tener una puntuación de Carisma y una puntuación de Fuerza de 13 o superior para poder entrar o salir de esta clase en varias clases.</p>
+
+    <div class="section">
+        <h2>Tabla de Progresión del Paladín</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Bono de competencia</th>
+                <th>Funciones</th>
+                <th>1º</th>
+                <th>2º</th>
+                <th>3º</th>
+                <th>4º</th>
+                <th>5º</th>
+            </tr>
+            <tr>
+                <td>1º</td>
+                <td>+2</td>
+                <td>Sentido Divino, Imposición de Manos</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2º</td>
+                <td>+2</td>
+                <td>Estilo de lucha, Lanzamiento de hechizos, Castigo divino</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>3º</td>
+                <td>+2</td>
+                <td>Salud Divina, Juramento Sagrado, Arnés Poder Divino (Opcional)</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>4º</td>
+                <td>+2</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>5º</td>
+                <td>+3</td>
+                <td>Ataque extra</td>
+                <td>4</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>6º</td>
+                <td>+3</td>
+                <td>Aura de protección</td>
+                <td>4</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>7º</td>
+                <td>+3</td>
+                <td>Función Juramento Sagrado</td>
+                <td>4</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>8º</td>
+                <td>+3</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>4</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>9º</td>
+                <td>+4</td>
+                <td>-</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>10º</td>
+                <td>+4</td>
+                <td>Aura de coraje</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>11º</td>
+                <td>+4</td>
+                <td>Castigo divino mejorado</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>12º</td>
+                <td>+4</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>13º</td>
+                <td>+5</td>
+                <td>-</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>14º</td>
+                <td>+5</td>
+                <td>Toque limpiador</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>15º</td>
+                <td>+5</td>
+                <td>Función Juramento Sagrado</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>16º</td>
+                <td>+5</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>17º</td>
+                <td>+6</td>
+                <td>-</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>18º</td>
+                <td>+6</td>
+                <td>Mejoras en el aura</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>19º</td>
+                <td>+6</td>
+                <td>Mejora de la puntuación de habilidad, Versatilidad marcial (opcional)</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>20º</td>
+                <td>+6</td>
+                <td>Función Juramento Sagrado</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Características de la Clase</h2>
+        <h3>Puntos de Vida</h3>
+        <ul>
+            <li><strong>Dados de Golpe:</strong> 1d10 por nivel de paladín</li>
+            <li><strong>Puntos de Golpe en el 1er Nivel:</strong> 10 + tu modificador de Constitución</li>
+            <li><strong>Puntos de Golpe en Niveles Superiores:</strong> 1d10 (o 6) + tu modificador de Constitución por nivel de paladín después del 1er nivel</li>
+        </ul>
+
+        <h3>Competencias</h3>
+        <ul>
+            <li><strong>Armadura:</strong> Todas las armaduras, escudos</li>
+            <li><strong>Armas:</strong> Armas simples, armas marciales</li>
+            <li><strong>Herramientas:</strong> Ninguna</li>
+            <li><strong>Tiradas de salvación:</strong> Sabiduría, Carisma</li>
+            <li><strong>Habilidades:</strong> Elige dos de Atletismo, Perspicacia, Intimidación, Medicina, Persuasión y Religión</li>
+        </ul>
+
+        <h3>Equipo</h3>
+        <p>Comienzas con el siguiente equipo, además del equipo otorgado por tu trasfondo:</p>
+        <ul>
+            <li>(a) un arma marcial y un escudo o (b) dos armas marciales</li>
+            <li>(a) cinco jabalinas o (b) cualquier arma cuerpo a cuerpo simple</li>
+            <li>(a) una mochila de sacerdote o (b) una mochila de explorador</li>
+            <li>Cota de malla y un símbolo sagrado</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Sentido Divino</h2>
+        <p>La presencia de un mal fuerte se registra en tus sentidos como un olor nocivo, y el bien poderoso resuena como música celestial en tus oídos. Como acción, puedes abrir tu conciencia para detectar tales fuerzas. Hasta el final de tu próximo turno, conoces la ubicación de cualquier celestial, infernal o no muerto dentro de 60 pies de ti que no esté detrás de una cobertura total. Sabes el tipo (celestial, infernal o no muerto) de cualquier ser cuya presencia detectes, pero no su identidad (por ejemplo, el vampiro Conde Strahd von Zarovich). Dentro del mismo radio, también detectas la presencia de cualquier lugar u objeto que haya sido consagrado o profanado, como con el hechizo Santificar.</p>
+        <p>Puedes usar esta característica un número de veces igual a 1 + tu modificador de Carisma. Cuando terminas un descanso largo, recuperas todos los usos gastados.</p>
+    </div>
+
+    <div class="section">
+        <h2>Imposición de Manos</h2>
+        <p>Tu toque bendito puede curar heridas. Tienes un depósito de poder curativo que se repone cuando realizas un descanso largo. Con ese depósito, puedes restaurar un número total de puntos de golpe igual a tu nivel de paladín x 5.</p>
+        <p>Como acción, puedes tocar a una criatura y extraer poder del depósito para restaurar una cantidad de puntos de golpe a esa criatura, hasta el máximo restante en tu depósito.</p>
+        <p>Alternativamente, puedes gastar 5 puntos de golpe de tu depósito de curación para curar al objetivo de una enfermedad o neutralizar un veneno que lo afecte. Puedes curar múltiples enfermedades y neutralizar múltiples venenos con un solo uso de Imposición de Manos, gastando puntos de golpe por separado para cada uno.</p>
+        <p>Esta característica no tiene efecto sobre no muertos y constructos.</p>
+    </div>
+
+    <div class="section">
+        <h2>Estilo de Lucha</h2>
+        <p>A partir del nivel 2, adoptas un estilo de lucha particular como tu especialidad. Elige una de las siguientes opciones. No puedes elegir un estilo de lucha más de una vez, incluso si más adelante puedes elegir de nuevo.</p>
+        <ul>
+            <li><strong>Guerrero Bendito:</strong> Aprendes dos cantrips de tu elección de la lista de hechizos de clérigo. Cuentan como hechizos de paladín para ti, y Carisma es tu habilidad de lanzamiento de hechizos para ellos. Cada vez que ganas un nivel en esta clase, puedes reemplazar uno de estos cantrips con otro cantrip de la lista de hechizos de clérigo.</li>
+            <li><strong>Combate a Ciegas:</strong> Tienes visión ciega con un alcance de 10 pies. Dentro de ese alcance, puedes ver efectivamente cualquier cosa que no esté detrás de una cobertura total, incluso si estás cegado o en la oscuridad. Además, puedes ver una criatura invisible dentro de ese alcance, a menos que la criatura se oculte exitosamente de ti.</li>
+            <li><strong>Defensa:</strong> Mientras llevas armadura, obtienes un +1 a la CA.</li>
+            <li><strong>Duelo:</strong> Cuando empuñas un arma cuerpo a cuerpo con una mano y ninguna otra arma, obtienes un +2 a las tiradas de daño con esa arma.</li>
+            <li><strong>Combate con Armas a Dos Manos:</strong> Cuando sacas un 1 o un 2 en un dado de daño para un ataque que hagas con un arma cuerpo a cuerpo que empuñas con dos manos, puedes volver a tirar el dado y debes usar el nuevo resultado, incluso si es un 1 o un 2. El arma debe tener la propiedad de dos manos o versátil para que obtengas este beneficio.</li>
+            <li><strong>Intercepción:</strong> Cuando una criatura que puedes ver golpea a un objetivo, que no seas tú, dentro de 5 pies de ti con un ataque, puedes usar tu reacción para reducir el daño que el objetivo recibe en 1d10 + tu bonificación de competencia (mínimo 0 de daño). Debes empuñar un escudo o un arma simple o marcial para usar esta reacción.</li>
+            <li><strong>Protección:</strong> Cuando una criatura que puedes ver ataca a un objetivo que no seas tú y que esté dentro de 5 pies de ti, puedes usar tu reacción para imponer desventaja en la tirada de ataque. Debes empuñar un escudo.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Lanzamiento de Hechizos</h2>
+        <p>En el nivel 2, has aprendido a extraer magia divina a través de la meditación y la oración para lanzar hechizos como lo hace un clérigo.</p>
+
+        <h3>Preparación y Lanzamiento de Hechizos</h3>
+        <p>La tabla de Paladín muestra cuántas ranuras de hechizos tienes para lanzar tus hechizos de paladín. Para lanzar uno de tus hechizos de paladín de nivel 1 o superior, debes gastar una ranura del nivel del hechizo o superior. Recuperas todas las ranuras de hechizos gastadas cuando terminas un descanso largo.</p>
+        <p>Preparas la lista de hechizos de paladín que están disponibles para que los lances, eligiendo de la lista de hechizos de paladín. Cuando lo hagas, elige un número de hechizos de paladín igual a tu modificador de Carisma + la mitad de tu nivel de paladín, redondeado hacia abajo (mínimo de un hechizo). Los hechizos deben ser de un nivel para el que tengas ranuras de hechizos.</p>
+        <p>Por ejemplo, si eres un paladín de nivel 5, tienes cuatro ranuras de hechizos de nivel 1 y dos de nivel 2. Con un Carisma de 14, tu lista de hechizos preparados puede incluir cuatro hechizos de nivel 1 o 2, en cualquier combinación. Si preparas el hechizo de nivel 1 Curar Heridas, puedes lanzarlo usando una ranura de nivel 1 o 2. Lanzar el hechizo no lo elimina de tu lista de hechizos preparados.</p>
+        <p>Puedes cambiar tu lista de hechizos preparados cuando terminas un descanso largo. Preparar una nueva lista de hechizos de paladín requiere tiempo dedicado a la oración y la meditación: al menos 1 minuto por nivel de hechizo para cada hechizo de tu lista.</p>
+
+        <h3>Habilidad de Lanzamiento de Hechizos</h3>
+        <p>Carisma es tu habilidad de lanzamiento de hechizos para tus hechizos de paladín, ya que su poder proviene de la fuerza de tus convicciones. Usas tu Carisma siempre que un hechizo de paladín se refiera a tu habilidad de lanzamiento de hechizos. Además, usas tu modificador de Carisma cuando estableces la CD de la tirada de salvación para un hechizo de paladín que lanzas y cuando haces una tirada de ataque con uno.</p>
+        <p><strong>CD de salvación de hechizo = 8 + tu bonificación de competencia + tu modificador de Carisma</strong></p>
+        <p><strong>Modificador de ataque de hechizo = tu bonificación de competencia + tu modificador de Carisma</strong></p>
+
+        <h3>Enfoque de Lanzamiento de Hechizos</h3>
+        <p>Puedes usar un símbolo sagrado como foco de lanzamiento de hechizos para tus hechizos de paladín.</p>
+    </div>
+
+    <div class="section">
+        <h2>Castigo Divino</h2>
+        <p>A partir del nivel 2, cuando golpeas a una criatura con un ataque con arma cuerpo a cuerpo, puedes gastar una ranura de hechizo para infligir daño radiante al objetivo, además del daño del arma. El daño adicional es 2d8 para una ranura de hechizo de nivel 1, más 1d8 por cada nivel de hechizo superior a 1, hasta un máximo de 5d8. El daño aumenta en 1d8 si el objetivo es un no muerto o un infernal, hasta un máximo de 6d8.</p>
+    </div>
+
+    <div class="section">
+        <h2>Salud Divina</h2>
+        <p>En el nivel 3, la magia divina que fluye a través de ti te hace inmune a las enfermedades.</p>
+    </div>
+
+    <div class="section">
+        <h2>Juramento Sagrado</h2>
+        <p>Cuando alcanzas el nivel 3, juras el juramento que te vincula como paladín para siempre. Hasta este momento, has estado en una etapa preparatoria, comprometido con el camino pero aún no jurado a él. Tu elección te otorga características en el nivel 3 y nuevamente en los niveles 7, 15 y 20. Esas características incluyen hechizos de juramento y la característica de Canalizar Divinidad.</p>
+
+        <h3>Juramentos</h3>
+        <ul>
+            <li><strong>Antiguos:</strong> Manual del Jugador</li>
+            <li><strong>Conquista:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Corona:</strong> Guía del Aventurero de la Costa de la Espada</li>
+            <li><strong>Devoción:</strong> Manual del Jugador</li>
+            <li><strong>Gloria:</strong> Odiseas Míticas de Theros</li>
+            <li><strong>Redención:</strong> Guía de Xanathar para Todo</li>
+            <li><strong>Venganza:</strong> Manual del Jugador</li>
+            <li><strong>Vigilantes:</strong> El Caldero de Todo de Tasha</li>
+            <li><strong>Ruptura de Juramento:</strong> Guía del Dungeon Master</li>
+        </ul>
+
+        <h3>Hechizos de Juramento</h3>
+        <p>Cada juramento tiene una lista de hechizos asociados. Obtienes acceso a estos hechizos en los niveles especificados en la descripción del juramento. Una vez que obtienes acceso a un hechizo de juramento, siempre lo tienes preparado. Los hechizos de juramento no cuentan para el número de hechizos que puedes preparar cada día.</p>
+        <p>Si obtienes un hechizo de juramento que no aparece en la lista de hechizos de paladín, el hechizo es, no obstante, un hechizo de paladín para ti.</p>
+    </div>
+
+    <div class="section">
+        <h2>Canalizar Divinidad</h2>
+        <p>Tu juramento te permite canalizar energía divina para potenciar efectos mágicos. Cada opción de Canalizar Divinidad proporcionada por tu juramento explica cómo usarla.</p>
+        <p>Cuando usas tu Canalizar Divinidad, eliges qué opción usar. Luego debes terminar un descanso corto o largo para volver a usar tu Canalizar Divinidad.</p>
+        <p>Algunos efectos de Canalizar Divinidad requieren tiradas de salvación. Cuando usas un efecto de este tipo de esta clase, la CD es igual a tu CD de salvación de hechizo de paladín.</p>
+    </div>
+
+    <div class="section">
+        <h2>Arnés Poder Divino (Opcional)</h2>
+        <p>También en el nivel 3, puedes gastar un uso de tu Canalizar Divinidad para alimentar tus hechizos. Como acción de bonificación, tocas tu símbolo sagrado, pronuncias una oración y recuperas una ranura de hechizo gastada, cuyo nivel no puede ser superior a la mitad de tu bonificación de competencia (redondeada hacia arriba). El número de veces que puedes usar esta función se basa en el nivel que hayas alcanzado en esta clase: 3er nivel, una vez; 7º nivel, dos veces; y el nivel 15, tres veces. Recuperas todos los usos gastados cuando terminas un descanso prolongado.</p>
+    </div>
+
+    <div class="section">
+        <h2>Mejora de la Puntuación de Habilidad</h2>
+        <p>Cuando alcances el 4º nivel, y de nuevo en el 8º, 12º, 16º y 19º nivel, puedes aumentar una puntuación de habilidad de tu elección en 2, o puedes aumentar dos puntuaciones de habilidad de tu elección en 1. Como de costumbre, no puedes aumentar una puntuación de habilidad por encima de 20 usando esta función.</p>
+    </div>
+
+    <div class="section">
+        <h2>Versatilidad Marcial (Opcional)</h2>
+        <p>Cada vez que alcances un nivel en esta clase que otorgue la función de mejora de la puntuación de habilidad, puedes reemplazar un estilo de lucha que conozcas con otro estilo de lucha disponible para los paladines. Este reemplazo representa un cambio de enfoque en tu práctica marcial.</p>
+    </div>
+
+    <div class="section">
+        <h2>Ataque Extra</h2>
+        <p>A partir del 5º nivel, puedes atacar dos veces, en lugar de una, siempre que realices la acción de Ataque en tu turno.</p>
+    </div>
+
+    <div class="section">
+        <h2>Aura de Protección</h2>
+        <p>A partir del nivel 6, siempre que tú o una criatura aliada a menos de 10 pies de ti debáis hacer una tirada de salvación, la criatura gana una bonificación a la tirada de salvación igual a tu modificador de Carisma (con una bonificación mínima de +1). Debes estar atento para otorgar este bono.</p>
+        <p>En el nivel 18, el alcance de esta aura aumenta a 30 pies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Aura de Coraje</h2>
+        <p>A partir del nivel 10, tú y las criaturas amistosas a menos de 10 pies de ti no pueden asustarse mientras estás consciente.</p>
+        <p>En el nivel 18, el alcance de esta aura aumenta a 30 pies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Castigo Divino Mejorado</h2>
+        <p>En el nivel 11, estás tan impregnado de poder justo que todos tus golpes con armas cuerpo a cuerpo llevan consigo el poder divino. Siempre que golpeas a una criatura con un arma cuerpo a cuerpo, la criatura recibe 1d8 puntos de daño radiante adicionales.</p>
+    </div>
+
+    <div class="section">
+        <h2>Toque Limpiador</h2>
+        <p>A partir del nivel 14, puedes usar tu acción para terminar un hechizo sobre ti mismo o sobre una criatura dispuesta que toques.</p>
+        <p>Puedes usar esta función un número de veces igual a tu modificador de Carisma (un mínimo de una vez). Recuperas los usos gastados cuando terminas un descanso prolongado.</p>
+    </div>
+
+</body>
+</html>

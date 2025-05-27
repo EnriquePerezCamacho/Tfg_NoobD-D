@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUENTE GENERAL Y FONDO */
+body {
+    font-family: 'Cinzel', serif;
+    background: #1a1a1a url('imagenes/fondoDnD.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #f3e4c7;
+    padding: 0;
+}
+
+/* HEADER CON BANNER */
+header {
+    background-image: url('../../imagenes/BannerDnD.gif');
+    background-size: cover;
+    background-position: center;
+    height: 260px;
+    border-bottom: 4px solid #8b0000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+header h1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #fff4d6;
+    font-size: 3.5em;
+    text-shadow: 3px 3px 6px #000;
+    margin: 0;
+}
+
+/* NAV BAR */
+nav {
+    background-color: rgba(44, 26, 18, 0.9);
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: inset 0 0 10px #000;
+    border-top: 2px solid #8b0000;
+    border-bottom: 2px solid #8b0000;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav button {
+    background: linear-gradient(to bottom, #5c1e1e, #3c0f0f);
+    color: #f5e6c4;
+    padding: 10px 20px;
+    border: 2px solid #8b0000;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px #000;
+}
+
+nav button:hover {
+    background: #a52a2a;
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #8b0000;
+}
+
+/* SECCIÓN PRINCIPAL */
+section {
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* TÍTULOS */
+section h2 {
+    font-size: 2.2rem;
+    color: #ffd9a0;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* PÁRRAFOS */
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f3e4c7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* BOTONES DE CLASE */
+#botones-clases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#botones-clases button {
+    background-color: #8b0000;
+    color: #f5e6c4;
+    padding: 10px 18px;
+    border: 2px solid #aa2222;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    box-shadow: 0 3px 8px #000;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#botones-clases button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+/* TABLA DE SUBCLASES */
+#tabla-subclases {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#tabla-subclases th,
+#tabla-subclases td {
+    padding: 12px;
+    border: 1px solid #8b0000;
+    text-align: left;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #f3e4c7;
+}
+
+#tabla-subclases th {
+    background-color: #5c1e1e;
+    color: #ffd9a0;
+    font-size: 1.1rem;
+}
+
+/* ENLACES DE SUBCLASES */
+#tabla-subclases a {
+    color: #ffcc66;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#tabla-subclases a:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 3px solid #8b0000;
+}
